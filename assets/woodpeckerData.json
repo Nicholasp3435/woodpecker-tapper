@@ -1,0 +1,853 @@
+{
+	"secret1":
+	{
+		"name": "secret one",
+		"source": "",
+		"source-time": "",
+		"data":
+		[
+			{
+				"volume": 1,
+				"timer": 146
+			},
+			{
+				"volume": 1,
+				"timer": 524
+			},
+			{
+				"volume": 1,
+				"timer": 710
+			},
+			{
+				"volume": 1,
+				"timer": 913
+			},
+			{
+				"volume": 1,
+				"timer": 1279
+			},
+			{
+				"volume": 1,
+				"timer": 2040
+			},
+			{
+				"volume": 1,
+				"timer": 2411
+			}
+		]
+	},
+	"yebsap": 
+	{
+		"name": "Yellow-bellied Sapsucker",
+		"source": "https://macaulaylibrary.org/asset/83128811",
+		"source-time": 17,
+		"image-source": "https://macaulaylibrary.org/asset/157574821",
+		"data": 
+		[
+			{
+				"volume": 0.8,
+				"timer": 26
+			},
+			{
+				"volume": 0.8,
+				"timer": 99
+			},
+			{
+				"volume": 0.65,
+				"timer": 156
+			},
+			{
+				"volume": 0.35,
+				"timer": 197
+			},
+			{
+				"volume": 0.9,
+				"timer": 331
+			},
+			{
+				"volume": 0.35,
+				"timer": 372
+			},
+			{
+				"volume": 0.85,
+				"timer": 531
+			},
+			{
+				"volume": 0.4,
+				"timer": 569
+			},
+			{
+				"volume": 0.8,
+				"timer": 707
+			},
+			{
+				"volume": 0.3,
+				"timer": 742
+			},
+			{
+				"volume": 0.85,
+				"timer": 940
+			},
+			{
+				"volume": 0.4,
+				"timer": 978
+			},
+			{
+				"volume": 0.8,
+				"timer": 1126
+			},
+			{
+				"volume": 0.3,
+				"timer": 1161
+			},
+			{
+				"volume": 0.8,
+				"timer": 1424
+			},
+			{
+				"volume": 0.35,
+				"timer": 1464
+			},
+			{
+				"volume": 0.8,
+				"timer": 1611
+			},
+			{
+				"volume": 0.3,
+				"timer": 1647
+			},
+			{
+				"volume": 0.8,
+				"timer": 1964
+			},
+			{
+				"volume": 0.4,
+				"timer": 2006
+			},
+			{
+				"volume": 0.8,
+				"timer": 2206
+			},
+			{
+				"volume": 0.4,
+				"timer": 2245
+			},
+			{
+				"volume": 0.85,
+				"timer": 2595
+			},
+			{
+				"volume": 0.45,
+				"timer": 2640
+			},
+			{
+				"volume": 0.1,
+				"timer": 2676
+			},
+			{
+				"volume": 0.8,
+				"timer": 3042
+			},
+			{
+				"volume": 0.45,
+				"timer": 3087
+			},
+			{
+				"volume": 0.8,
+				"timer": 3285
+			},
+			{
+				"volume": 0.4,
+				"timer": 3322
+			}
+		]
+	},
+	"pilwoo": 
+	{
+		"name": "Pileated Woodpecker",
+		"source": "https://macaulaylibrary.org/asset/63086",
+		"source-time": 42,
+		"image-source": "https://macaulaylibrary.org/asset/94379711",
+		"data": 
+		[
+			{
+				"volume": 0.45,
+				"timer": 36
+			},
+			{
+				"volume": 0.85,
+				"timer": 132
+			},
+			{
+				"volume": 0.9,
+				"timer": 219
+			},
+			{
+				"volume": 1,
+				"timer": 300
+			},
+			{
+				"volume": 1,
+				"timer": 381
+			},
+			{
+				"volume": 1,
+				"timer": 460
+			},
+			{
+				"volume": 0.9,
+				"timer": 541
+			},
+			{
+				"volume": 0.8,
+				"timer": 613
+			},
+			{
+				"volume": 0.8,
+				"timer": 690
+			},
+			{
+				"volume": 0.8,
+				"timer": 766
+			},
+			{
+				"volume": 0.85,
+				"timer": 836
+			},
+			{
+				"volume": 0.75,
+				"timer": 911
+			},
+			{
+				"volume": 0.75,
+				"timer": 980
+			},
+			{
+				"volume": 0.7,
+				"timer": 1051
+			},
+			{
+				"volume": 0.7,
+				"timer": 1122
+			},
+			{
+				"volume": 0.7,
+				"timer": 1186
+			},
+			{
+				"volume": 0.6,
+				"timer": 1258
+			},
+			{
+				"volume": 0.65,
+				"timer": 1325
+			},
+			{
+				"volume": 0.7,
+				"timer": 1392
+			},
+			{
+				"volume": 0.65,
+				"timer": 1457
+			},
+			{
+				"volume": 0.65,
+				"timer": 1522
+			},
+			{
+				"volume": 0.55,
+				"timer": 1591
+			},
+			{
+				"volume": 0.55,
+				"timer": 1653
+			},
+			{
+				"volume": 0.5,
+				"timer": 1720
+			},
+			{
+				"volume": 0.55,
+				"timer": 1785
+			},
+			{
+				"volume": 0.45,
+				"timer": 1849
+			},
+			{
+				"volume": 0.45,
+				"timer": 1911
+			},
+			{
+				"volume": 0.4,
+				"timer": 1972
+			},
+			{
+				"volume": 0.45,
+				"timer": 2039
+			},
+			{
+				"volume": 0.45,
+				"timer": 2104
+			},
+			{
+				"volume": 0.4,
+				"timer": 2165
+			},
+			{
+				"volume": 0.35,
+				"timer": 2226
+			},
+			{
+				"volume": 0.35,
+				"timer": 2290
+			},
+			{
+				"volume": 0.3,
+				"timer": 2352
+			},
+			{
+				"volume": 0.3,
+				"timer": 2409
+			},
+			{
+				"volume": 0.25,
+				"timer": 2469
+			},
+			{
+				"volume": 0.15,
+				"timer": 2532
+			}
+		]
+	},
+	"dowwoo": 
+	{
+		"name": "Downy Woodpecker",
+		"source": "https://macaulaylibrary.org/asset/44905",
+		"source-time": 7,
+		"image-source": "https://macaulaylibrary.org/asset/50580161",
+		"data": 
+		[
+			{
+				"volume": 0.45,
+				"timer": 24
+			},
+			{
+				"volume": 0.9,
+				"timer": 95
+			},
+			{
+				"volume": 0.95,
+				"timer": 162
+			},
+			{
+				"volume": 0.95,
+				"timer": 230
+			},
+			{
+				"volume": 1,
+				"timer": 296
+			},
+			{
+				"volume": 1,
+				"timer": 364
+			},
+			{
+				"volume": 0.95,
+				"timer": 431
+			},
+			{
+				"volume": 1,
+				"timer": 497
+			},
+			{
+				"volume": 1,
+				"timer": 567
+			},
+			{
+				"volume": 0.95,
+				"timer": 636
+			},
+			{
+				"volume": 0.95,
+				"timer": 705
+			},
+			{
+				"volume": 1,
+				"timer": 775
+			},
+			{
+				"volume": 1,
+				"timer": 844
+			},
+			{
+				"volume": 0.9,
+				"timer": 915
+			},
+			{
+				"volume": 0.8,
+				"timer": 988
+			}
+		]
+	},
+	"haiwoo": 
+	{
+		"name": "Hairy Woodpecker",
+		"source": "https://macaulaylibrary.org/asset/211304391",
+		"source-time": 66,
+		"image-source": "https://macaulaylibrary.org/asset/303463251",
+		"data": 
+		[
+			{
+				"volume": 0.05,
+				"timer": 19
+			},
+			{
+				"volume": 0.05,
+				"timer": 72
+			},
+			{
+				"volume": 0.05,
+				"timer": 109
+			},
+			{
+				"volume": 0.05,
+				"timer": 147
+			},
+			{
+				"volume": 0.15,
+				"timer": 185
+			},
+			{
+				"volume": 0.4,
+				"timer": 228
+			},
+			{
+				"volume": 0.5,
+				"timer": 266
+			},
+			{
+				"volume": 0.6,
+				"timer": 306
+			},
+			{
+				"volume": 0.7,
+				"timer": 345
+			},
+			{
+				"volume": 0.8,
+				"timer": 385
+			},
+			{
+				"volume": 0.85,
+				"timer": 425
+			},
+			{
+				"volume": 0.9,
+				"timer": 466
+			},
+			{
+				"volume": 0.95,
+				"timer": 506
+			},
+			{
+				"volume": 0.95,
+				"timer": 547
+			},
+			{
+				"volume": 0.9,
+				"timer": 588
+			},
+			{
+				"volume": 0.85,
+				"timer": 629
+			},
+			{
+				"volume": 0.95,
+				"timer": 670
+			},
+			{
+				"volume": 1,
+				"timer": 711
+			},
+			{
+				"volume": 0.95,
+				"timer": 754
+			},
+			{
+				"volume": 0.95,
+				"timer": 796
+			},
+			{
+				"volume": 1,
+				"timer": 838
+			},
+			{
+				"volume": 1,
+				"timer": 879
+			},
+			{
+				"volume": 1,
+				"timer": 921
+			},
+			{
+				"volume": 0.95,
+				"timer": 964
+			},
+			{
+				"volume": 1,
+				"timer": 1007
+			},
+			{
+				"volume": 0.9,
+				"timer": 1049
+			},
+			{
+				"volume": 1,
+				"timer": 1092
+			},
+			{
+				"volume": 0.85,
+				"timer": 1134
+			},
+			{
+				"volume": 0.8,
+				"timer": 1177
+			},
+			{
+				"volume": 0.95,
+				"timer": 1221
+			},
+			{
+				"volume": 0.85,
+				"timer": 1264
+			},
+			{
+				"volume": 0.85,
+				"timer": 1308
+			},
+			{
+				"volume": 0.85,
+				"timer": 1352
+			},
+			{
+				"volume": 0.8,
+				"timer": 1398
+			},
+			{
+				"volume": 0.05,
+				"timer": 1444
+			}
+		]
+	},
+	"grswoo": 
+	{
+		"name": "Great Spotted Woodpecker",
+		"source": "https://macaulaylibrary.org/asset/202206891",
+		"source-time": 21,
+		"image-source": "https://macaulaylibrary.org/asset/163401241",
+		"data": 
+		[
+			{
+				"volume": 0.7,
+				"timer": 10
+			},
+			{
+				"volume": 0.6,
+				"timer": 71
+			},
+			{
+				"volume": 0.9,
+				"timer": 130
+			},
+			{
+				"volume": 0.9,
+				"timer": 188
+			},
+			{
+				"volume": 1,
+				"timer": 242
+			},
+			{
+				"volume": 0.95,
+				"timer": 296
+			},
+			{
+				"volume": 0.85,
+				"timer": 346
+			},
+			{
+				"volume": 0.75,
+				"timer": 396
+			},
+			{
+				"volume": 0.8,
+				"timer": 444
+			},
+			{
+				"volume": 0.65,
+				"timer": 491
+			},
+			{
+				"volume": 0.35,
+				"timer": 535
+			}
+		]
+	},
+	"whbwoo": 
+	{
+		"name": "White-backed Woodpecker",
+		"source": "https://macaulaylibrary.org/asset/322224871",
+		"source-time": 31,
+		"image-source": "https://macaulaylibrary.org/asset/636021019",
+		"data": 
+		[
+			{
+				"volume": 0.50,
+				"timer": 46
+			},
+			{
+				"volume": 0.90,
+				"timer": 147
+			},
+			{
+				"volume": 0.95,
+				"timer": 238
+			},
+			{
+				"volume": 0.95,
+				"timer": 325
+			},
+			{
+				"volume": 1,
+				"timer": 407
+			},
+			{
+				"volume": 0.85,
+				"timer": 487
+			},
+			{
+				"volume": 0.95,
+				"timer": 564
+			},
+			{
+				"volume": 0.90,
+				"timer": 638
+			},
+			{
+				"volume": 0.70,
+				"timer": 709
+			},
+			{
+				"volume": 0.75,
+				"timer": 780
+			},
+			{
+				"volume": 0.70,
+				"timer": 848
+			},
+			{
+				"volume": 0.70,
+				"timer": 914
+			},
+			{
+				"volume": 0.55,
+				"timer": 980
+			},
+			{
+				"volume": 0.55,
+				"timer": 1044
+			},
+			{
+				"volume": 0.55,
+				"timer": 1104
+			},
+			{
+				"volume": 0.50,
+				"timer": 1164
+			},
+			{
+				"volume": 0.45,
+				"timer": 1223
+			},
+			{
+				"volume": 0.45,
+				"timer": 1280
+			},
+			{
+				"volume": 0.45,
+				"timer": 1336
+			},
+			{
+				"volume": 0.30,
+				"timer": 1390
+			},
+			{
+				"volume": 0.35,
+				"timer": 1444
+			},
+			{
+				"volume": 0.30,
+				"timer": 1497
+			},
+			{
+				"volume": 0.30,
+				"timer": 1548
+			},
+			{
+				"volume": 0.25,
+				"timer": 1597
+			},
+			{
+				"volume": 0.25,
+				"timer": 1645
+			},
+			{
+				"volume": 0.25,
+				"timer": 1692
+			},
+			{
+				"volume": 0.20,
+				"timer": 1740
+			},
+			{
+				"volume": 0.20,
+				"timer": 1784
+			},
+			{
+				"volume": 0.15,
+				"timer": 1892
+			},
+			{
+				"volume": 0.10,
+				"timer": 1875
+			},
+			{
+				"volume": 0.05,
+				"timer": 1923
+			}
+		]
+	},
+	"crcwoo":
+	{
+		"name": "Crimson-crested Woodpecker",
+		"source": "https://macaulaylibrary.org/asset/65161",
+		"source-time": 5,
+		"image-source": "https://macaulaylibrary.org/asset/112180011",
+		"data":
+		[
+			{
+				"volume": 0.7,
+				"timer": 30
+			},
+			{
+				"volume": 0.95,
+				"timer": 139
+			},
+			{
+				"volume": 0.95,
+				"timer": 230
+			},
+			{
+				"volume": 0.8,
+				"timer": 311
+			},
+			{
+				"volume": 0.6,
+				"timer": 380
+			},
+			{
+				"volume": 0.25,
+				"timer": 437
+			},
+			{
+				"volume": 0.1,
+				"timer": 486
+			}
+		]
+	},
+	"beawoo":
+	{
+		"name": "Bearded Woodpecker",
+		"source": "https://macaulaylibrary.org/asset/622920673",
+		"source-time": 31,
+		"image=source": "https://macaulaylibrary.org/asset/119421471",
+		"data":
+		[
+			{
+				"volume": 0.15,
+				"timer": 72
+			},
+			{
+				"volume": 0.65,
+				"timer": 160
+			},
+			{
+				"volume": 1,
+				"timer": 254
+			},
+			{
+				"volume": 0.6,
+				"timer": 367
+			},
+			{
+				"volume": 0.65,
+				"timer": 505
+			},
+			{
+				"volume": 0.65,
+				"timer": 669
+			},
+			{
+				"volume": 0.75,
+				"timer": 884
+			},
+			{
+				"volume": 0.75,
+				"timer": 1016
+			},
+			{
+				"volume": 0.75,
+				"timer": 1190
+			},
+			{
+				"volume": 0.7,
+				"timer": 1375
+			},
+			{
+				"volume": 0.7,
+				"timer": 1554
+			},
+			{
+				"volume": 0.7,
+				"timer": 1732
+			},
+			{
+				"volume": 0.8,
+				"timer": 1909
+			},
+			{
+				"volume": 0.8,
+				"timer": 2081
+			}
+		]
+	},
+	"powwoo": 
+	{
+		"name": "Powerful Woodpecker",
+		"source": "https://macaulaylibrary.org/asset/84098",
+		"source-time": 7,
+		"image-source": "https://macaulaylibrary.org/asset/109831141",
+		"data": 
+		[
+			{
+				"volume": 1,
+				"timer": 30
+			},
+			{
+				"volume": 0.85,
+				"timer": 103
+			}
+		]
+	}
+}
