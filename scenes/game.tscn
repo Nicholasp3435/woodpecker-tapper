@@ -1,16 +1,23 @@
 [gd_scene format=3 uid="uid://dcam6qcsri8r8"]
 
+[ext_resource type="Script" uid="uid://ctityrd48sik8" path="res://scripts/game_manager.gd" id="1_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://bbhhp7hqcqtg6" path="res://scenes/pyre.tscn" id="1_uwrxv"]
 [ext_resource type="PackedScene" uid="uid://kju2k3tkotrn" path="res://scenes/woodpecker.tscn" id="2_yqjtg"]
 [ext_resource type="Texture2D" uid="uid://rvbyt8iye7ol" path="res://assets/sprites/woodpeckers/dowwoo.png" id="3_lnu2h"]
 
 [node name="Game" type="Node2D" unique_id=1866045924]
 
+[node name="GameManager" type="Node" parent="." unique_id=781617746]
+unique_name_in_owner = true
+script = ExtResource("1_lbhrr")
+
 [node name="Pyre" parent="." unique_id=386602154 instance=ExtResource("1_uwrxv")]
 position = Vector2(200, 305)
 
 [node name="Woodpecker" parent="." unique_id=1366567008 instance=ExtResource("2_yqjtg")]
-offset_right = 96.0
-offset_bottom = 96.0
+offset_left = 566.0
+offset_top = 175.0
+offset_right = 662.0
+offset_bottom = 271.0
 texture_normal = ExtResource("3_lnu2h")
 taxon_code = "dowwoo"
