@@ -3,8 +3,6 @@ extends Node
 
 @onready var pyre: Node2D = $"../Pyre";
 
-
-
 var in_sample_mode: bool = false;
 var in_recording_mode: bool = false;
 
@@ -13,8 +11,7 @@ var cur_state: int = Game_States.TIMER;
 
 var strike_count: int = 0;
 
-var wooodpecker_data: Dictionary = get_data();
-
+var woodpecker_data: Dictionary = get_data();
 
 func _input(event: InputEvent) -> void:
 	if not in_sample_mode:
