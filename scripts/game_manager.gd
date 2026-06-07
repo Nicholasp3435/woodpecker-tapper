@@ -13,7 +13,7 @@ var cur_state: int = Game_States.TIMER;
 
 var strike_count: int = 0;
 
-var wooodpecker_data = get_data();
+var wooodpecker_data: Dictionary = get_data();
 
 
 func _input(event: InputEvent) -> void:
@@ -32,7 +32,7 @@ func handle_strike():
 	print("strike: " + str(strike_count));
 
 func get_data() -> Dictionary:
-	var woodpecker_file: String = FileAccess.get_file_as_string("res://assets/woodpeckerData.json");
+	var woodpecker_file: String = FileAccess.get_file_as_string("res://assets/woodpecker_data.json");
 	
 	var json := JSON.new();
 	var error := json.parse(woodpecker_file);
