@@ -1,3 +1,8 @@
 [gd_scene format=3 uid="uid://dcam6qcsri8r8"]
 
+[ext_resource type="PackedScene" uid="uid://bbhhp7hqcqtg6" path="res://scenes/pyre.tscn" id="1_uwrxv"]
+
 [node name="Game" type="Node2D" unique_id=1866045924]
+
+[node name="Pyre" parent="." unique_id=386602154 instance=ExtResource("1_uwrxv")]
+position = Vector2(200, 305)
