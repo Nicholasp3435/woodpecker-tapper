@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="Woodpecker Tapper"
+run/main_scene="uid://dcam6qcsri8r8"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 

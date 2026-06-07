@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://bbhhp7hqcqtg6"]
+
+[ext_resource type="Texture2D" uid="uid://ct18cyhbqdvoa" path="res://assets/sprites/pyre.png" id="1_tolfl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_to21n"]
+atlas = ExtResource("1_tolfl")
+region = Rect2(0, 242, 187, 242)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6amyj"]
+atlas = ExtResource("1_tolfl")
+region = Rect2(0, 0, 187, 242)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wxbv4"]
+atlas = ExtResource("1_tolfl")
+region = Rect2(0, 484, 187, 242)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yuc2f"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_to21n")
+}],
+"loop": true,
+"name": &"hover",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6amyj")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wxbv4")
+}],
+"loop": true,
+"name": &"strike",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tolfl"]
+radius = 90.0
+height = 250.0
+
+[node name="Pyre" type="Node2D" unique_id=386602154]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=829258015]
+sprite_frames = SubResource("SpriteFrames_yuc2f")
+animation = &"idle"
+
+[node name="Area2D" type="Area2D" parent="." unique_id=137122845]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1281183880]
+position = Vector2(-8, 4)
+shape = SubResource("CapsuleShape2D_tolfl")
