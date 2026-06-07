@@ -1,15 +1,21 @@
+@tool
 extends TextureButton
 
+## Macaulay Library taxon code
+@export var taxon_code: String = "":
+	set(value):
+		taxon_code = value;
+		update_self();
 
-@export var taxon_code: String;
+func _ready():
+	update_self();
 
-@onready var label: Label = $Label
+func update_self():
+	if taxon_code == "":
+		return;
 
-func _ready() -> void:	
 	var image_path: String = "res://assets/sprites/woodpeckers/" + taxon_code + ".png";
 	texture_normal = load(image_path);
 	
-	label.text = taxon_code
-
-func _on_button_up() -> void:
-	print(taxon_code);
+	var label: Label = $Label;
+	label.text = taxon_code;
