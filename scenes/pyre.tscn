@@ -60,5 +60,10 @@ autoplay = "idle"
 position = Vector2(-8, 4)
 shape = SubResource("CapsuleShape2D_tolfl")
 
+[node name="Timer" type="Timer" parent="." unique_id=1729107773]
+wait_time = 0.017
+one_shot = true
+
 [connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

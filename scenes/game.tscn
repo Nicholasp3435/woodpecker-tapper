@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://ctityrd48sik8" path="res://scripts/game_manager.gd" id="1_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://bbhhp7hqcqtg6" path="res://scenes/pyre.tscn" id="1_uwrxv"]
 [ext_resource type="PackedScene" uid="uid://kju2k3tkotrn" path="res://scenes/woodpecker.tscn" id="2_yqjtg"]
-[ext_resource type="Texture2D" uid="uid://rvbyt8iye7ol" path="res://assets/sprites/woodpeckers/dowwoo.png" id="3_lnu2h"]
+[ext_resource type="Texture2D" uid="uid://cb6ugnekgodsi" path="res://assets/sprites/woodpeckers/yebsap.png" id="5_iywne"]
 [ext_resource type="Texture2D" uid="uid://d3tdwlfjqfbeo" path="res://assets/sprites/woodpeckers/haiwoo.png" id="6_p57ef"]
 
 [node name="Game" type="Node2D" unique_id=1866045924]
@@ -22,7 +22,6 @@ offset_left = 377.0
 offset_top = 41.0
 offset_right = 473.0
 offset_bottom = 137.0
-texture_normal = ExtResource("3_lnu2h")
 taxon_code = "dowwoo"
 
 [node name="Hairy" parent="Woodpeckers" unique_id=1366567008 instance=ExtResource("2_yqjtg")]
@@ -32,3 +31,11 @@ offset_right = 632.0
 offset_bottom = 137.0
 texture_normal = ExtResource("6_p57ef")
 taxon_code = "haiwoo"
+
+[node name="sapsucker" parent="Woodpeckers" unique_id=485138401 instance=ExtResource("2_yqjtg")]
+offset_left = 710.0
+offset_top = 43.0
+offset_right = 806.0
+offset_bottom = 139.0
+texture_normal = ExtResource("5_iywne")
+taxon_code = "yebsap"
