@@ -28,7 +28,6 @@ func _process(delta: float) -> void:
 		" times in " + str(snapped(time_elapsed, 0.01)) + " seconds");
 	
 	time_elapsed += delta;
-	print(time_elapsed)
 
 func _input(event: InputEvent) -> void:
 	if cur_state == Drumming_States.IDLE or cur_state == Drumming_States.USER:
