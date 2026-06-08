@@ -2,7 +2,7 @@
 extends TextureButton
 
 @onready var game_manager: Node = %GameManager;
-@onready var timer: Timer = %GameManager/SampleTimer
+@onready var pyre: Node2D = %Pyre;
 @onready var label: Label = $Label;
 
 const WOODPECKER_IMAGE_PATH: String = "res://assets/sprites/woodpeckers/";
@@ -29,16 +29,13 @@ func update_self():
 	
 	data = game_manager.woodpecker_data[taxon_code]
 	max_time = data["data"][-1]["timer"] / 1000;
-		
 	
 	label.text = data["name"];
 
 func _on_button_up() -> void:
-	if game_manager.in_sample_mode:
+	if pyre.cur_state != pyre.Drumming_States.IDLE:
 		return;
 		
-	game_manager.in_sample_mode = true;
-	timer.wait_time = max_time + 1;
-	timer.start();
+	pyre.sample_timer.wait_time = max_time;
+	pyre.sample_timer.start();
 	game_manager.handle_pattern(data);
-	

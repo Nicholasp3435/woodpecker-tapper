@@ -56,9 +56,15 @@ height = 250.0
 [node name="Pyre" type="Node2D" unique_id=386602154]
 script = ExtResource("1_to21n")
 
+[node name="SampleTimer" type="Timer" parent="." unique_id=1052460109]
+one_shot = true
+
+[node name="DelayTimer" type="Timer" parent="." unique_id=1362362126]
+one_shot = true
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=829258015]
 sprite_frames = SubResource("SpriteFrames_yuc2f")
-animation = &"idle"
+animation = &"strike"
 autoplay = "idle"
 
 [node name="Area2D" type="Area2D" parent="." unique_id=137122845]
@@ -67,5 +73,7 @@ autoplay = "idle"
 position = Vector2(-8, 4)
 shape = SubResource("CapsuleShape2D_tolfl")
 
+[connection signal="timeout" from="SampleTimer" to="." method="_on_sample_timer_timeout"]
+[connection signal="timeout" from="DelayTimer" to="." method="_on_delay_timer_timeout"]
 [connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

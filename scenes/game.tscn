@@ -5,6 +5,12 @@
 [ext_resource type="PackedScene" uid="uid://kju2k3tkotrn" path="res://scenes/woodpecker.tscn" id="2_yqjtg"]
 [ext_resource type="Texture2D" uid="uid://cb6ugnekgodsi" path="res://assets/sprites/woodpeckers/yebsap.png" id="5_iywne"]
 [ext_resource type="Texture2D" uid="uid://d3tdwlfjqfbeo" path="res://assets/sprites/woodpeckers/haiwoo.png" id="6_p57ef"]
+[ext_resource type="Texture2D" uid="uid://bxi00tklk6vsm" path="res://assets/sprites/woodpeckers/pilwoo.png" id="6_u5sy4"]
+[ext_resource type="Texture2D" uid="uid://dmtr2gju2d6tf" path="res://assets/sprites/woodpeckers/grswoo.png" id="7_gee14"]
+[ext_resource type="Texture2D" uid="uid://c486yoil75qk2" path="res://assets/sprites/woodpeckers/whbwoo.png" id="8_0tnpc"]
+[ext_resource type="Texture2D" uid="uid://c3cr2btkm52qo" path="res://assets/sprites/woodpeckers/beawoo.png" id="9_kvpfn"]
+[ext_resource type="Texture2D" uid="uid://bfo1lbdqmsfyb" path="res://assets/sprites/woodpeckers/powwoo.png" id="10_dinhu"]
+[ext_resource type="Texture2D" uid="uid://c1ny4auqylpv3" path="res://assets/sprites/woodpeckers/crcwoo.png" id="11_kvuet"]
 
 [node name="Game" type="Node2D" unique_id=1866045924]
 
@@ -12,10 +18,8 @@
 unique_name_in_owner = true
 script = ExtResource("1_lbhrr")
 
-[node name="SampleTimer" type="Timer" parent="GameManager" unique_id=918717782]
-one_shot = true
-
 [node name="Pyre" parent="." unique_id=386602154 instance=ExtResource("1_uwrxv")]
+unique_name_in_owner = true
 position = Vector2(200, 305)
 
 [node name="Woodpeckers" type="Node" parent="." unique_id=1631324777]
@@ -43,4 +47,64 @@ offset_bottom = 139.0
 texture_normal = ExtResource("5_iywne")
 taxon_code = "yebsap"
 
-[connection signal="timeout" from="GameManager/SampleTimer" to="GameManager" method="_on_timer_timeout"]
+[node name="pileated" parent="Woodpeckers" unique_id=1917619516 instance=ExtResource("2_yqjtg")]
+offset_left = 379.0
+offset_top = 190.0
+offset_right = 475.0
+offset_bottom = 286.0
+texture_normal = ExtResource("6_u5sy4")
+taxon_code = "pilwoo"
+
+[node name="great spotted" parent="Woodpeckers" unique_id=1395958551 instance=ExtResource("2_yqjtg")]
+offset_left = 538.0
+offset_top = 190.0
+offset_right = 634.0
+offset_bottom = 286.0
+texture_normal = ExtResource("7_gee14")
+taxon_code = "grswoo"
+
+[node name="white backed" parent="Woodpeckers" unique_id=962559240 instance=ExtResource("2_yqjtg")]
+offset_left = 712.0
+offset_top = 192.0
+offset_right = 808.0
+offset_bottom = 288.0
+texture_normal = ExtResource("8_0tnpc")
+taxon_code = "whbwoo"
+
+[node name="pileated2" parent="Woodpeckers" unique_id=1736860327 instance=ExtResource("2_yqjtg")]
+offset_left = 376.0
+offset_top = 365.0
+offset_right = 472.0
+offset_bottom = 461.0
+texture_normal = ExtResource("9_kvpfn")
+taxon_code = "beawoo"
+
+[node name="great spotted2" parent="Woodpeckers" unique_id=342223760 instance=ExtResource("2_yqjtg")]
+offset_left = 535.0
+offset_top = 365.0
+offset_right = 631.0
+offset_bottom = 461.0
+texture_normal = ExtResource("10_dinhu")
+taxon_code = "powwoo"
+
+[node name="white backed2" parent="Woodpeckers" unique_id=1178302588 instance=ExtResource("2_yqjtg")]
+offset_left = 709.0
+offset_top = 367.0
+offset_right = 805.0
+offset_bottom = 463.0
+texture_normal = ExtResource("11_kvuet")
+taxon_code = "crcwoo"
+
+[node name="CounterLabel" type="Label" parent="." unique_id=1223603921]
+offset_left = 5.0
+offset_top = 599.0
+offset_right = 300.0
+offset_bottom = 632.0
+text = "You've struck X times in Y seconds"
+
+[node name="PlayingLabel" type="Label" parent="." unique_id=1442394708]
+offset_left = 3.0
+offset_top = 561.0
+offset_right = 414.0
+offset_bottom = 596.0
+text = "Playing X drum"
