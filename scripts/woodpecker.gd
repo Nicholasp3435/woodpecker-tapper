@@ -37,5 +37,4 @@ func _on_button_up() -> void:
 		return;
 		
 	pyre.sample_timer.wait_time = max_time;
-	pyre.sample_timer.start();
 	game_manager.handle_pattern(data);

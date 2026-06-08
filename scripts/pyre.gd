@@ -9,7 +9,6 @@ var mouse_in: bool = false;
 
 const WOODPECKER_STRIKE: String = "res://assets/strike.mp3";
 
-var is_timed: bool = false;
 var time_elapsed: float = 0.0;
 var time_max: float = 1.0;
 
@@ -22,7 +21,7 @@ var cur_state: int = Drumming_States.IDLE;
 
 
 func _process(delta: float) -> void:
-	if !is_timed:
+	if cur_state == Drumming_States.IDLE or cur_state == Drumming_States.DELAY:
 		return;
 	
 	game_manager.counter_label.text = ("You've struck " + str(strike_count) +
@@ -64,8 +63,7 @@ func handle_strike(volume: float, is_user: bool):
 			cur_state = Drumming_States.USER;
 		else:
 			cur_state = Drumming_States.SAMPLE;
-			
-		is_timed = true;
+
 		sample_timer.wait_time = time_max;
 		strike_count = 0;
 		time_elapsed = 0;
@@ -89,9 +87,17 @@ func _on_area_2d_mouse_exited() -> void:
 		animated_sprite.play("idle");
 
 func _on_sample_timer_timeout() -> void:
-	is_timed = false;
 	if cur_state == Drumming_States.SAMPLE:
 		animated_sprite.play("hover");
+	else:
+		var speed: float = strike_count / time_elapsed;
+		var result: String;
+		if speed > 12:
+			result = "That's as fast as a woodpecker!";
+		else:
+			result = "That's still slower than a woodpecker!";
+			
+		game_manager.playing_label.text = result;
 		
 	cur_state = Drumming_States.DELAY
 	delay_timer.start();
