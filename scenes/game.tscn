@@ -12,6 +12,9 @@
 unique_name_in_owner = true
 script = ExtResource("1_lbhrr")
 
+[node name="SampleTimer" type="Timer" parent="GameManager" unique_id=918717782]
+one_shot = true
+
 [node name="Pyre" parent="." unique_id=386602154 instance=ExtResource("1_uwrxv")]
 position = Vector2(200, 305)
 
@@ -39,3 +42,5 @@ offset_right = 806.0
 offset_bottom = 139.0
 texture_normal = ExtResource("5_iywne")
 taxon_code = "yebsap"
+
+[connection signal="timeout" from="GameManager/SampleTimer" to="GameManager" method="_on_timer_timeout"]

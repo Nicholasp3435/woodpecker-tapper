@@ -27,11 +27,11 @@ func _input(event: InputEvent) -> void:
 				pyre.animated_sprite.play("idle");
 	
 
-	
 func handle_pattern(data: Dictionary):
+	print("Playing a ", data["name"], "'s drum")
 	for strike in data.data:
-		var time: float = strike.timer / 1000;
-		var volume: float = strike.volume;
+		var time: float = strike["timer"] / 1000;
+		var volume: float = strike["volume"];
 		get_tree().create_timer(time).timeout.connect(func(): pyre.handle_strike(volume));
 
 func get_data() -> Dictionary:
@@ -44,3 +44,10 @@ func get_data() -> Dictionary:
 	else:
 		print("JSON Parse Error: ", json.get_error_message(), " at line ", json.get_error_line());
 		return {}
+
+func _on_timer_timeout() -> void:
+	in_sample_mode = false;
+	if pyre.mouse_in:
+		pyre.animated_sprite.play("hover");
+	else:
+		pyre.animated_sprite.play("idle");
