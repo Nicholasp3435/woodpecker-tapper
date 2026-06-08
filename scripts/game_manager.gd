@@ -2,6 +2,7 @@ extends Node
 
 
 @onready var pyre: Node2D = $"../Pyre";
+@onready var audio_player: AudioStreamPlayer2D = $"../AudioStreamPlayer2D"
 
 var in_sample_mode: bool = false;
 var in_recording_mode: bool = false;
@@ -26,7 +27,9 @@ func _input(event: InputEvent) -> void:
 
 func handle_strike(volume: float):
 	strike_count += 1;
-	# audio
+	audio_player.volume_linear = volume;
+	audio_player.play();
+
 	print("strike: ", strike_count, " volume: ", volume);
 	
 func handle_pattern(data: Dictionary):
