@@ -3,7 +3,8 @@
 [ext_resource type="Script" uid="uid://ctityrd48sik8" path="res://scripts/game_manager.gd" id="1_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://bbhhp7hqcqtg6" path="res://scenes/pyre.tscn" id="1_uwrxv"]
 [ext_resource type="PackedScene" uid="uid://kju2k3tkotrn" path="res://scenes/woodpecker.tscn" id="2_yqjtg"]
-[ext_resource type="AudioStream" uid="uid://bnjd0f1fhcg6c" path="res://assets/strike.mp3" id="4_lbhrr"]
+[ext_resource type="Texture2D" uid="uid://rvbyt8iye7ol" path="res://assets/sprites/woodpeckers/dowwoo.png" id="3_lnu2h"]
+[ext_resource type="Texture2D" uid="uid://d3tdwlfjqfbeo" path="res://assets/sprites/woodpeckers/haiwoo.png" id="6_p57ef"]
 
 [node name="Game" type="Node2D" unique_id=1866045924]
 
@@ -14,13 +15,20 @@ script = ExtResource("1_lbhrr")
 [node name="Pyre" parent="." unique_id=386602154 instance=ExtResource("1_uwrxv")]
 position = Vector2(200, 305)
 
-[node name="Woodpecker" parent="." unique_id=58942781 instance=ExtResource("2_yqjtg")]
-offset_left = 558.0
-offset_top = 160.0
-offset_right = 654.0
-offset_bottom = 256.0
-taxon_code = "yebsap"
+[node name="Woodpeckers" type="Node" parent="." unique_id=1631324777]
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=254477469]
-stream = ExtResource("4_lbhrr")
-max_polyphony = 16
+[node name="Downy" parent="Woodpeckers" unique_id=58942781 instance=ExtResource("2_yqjtg")]
+offset_left = 377.0
+offset_top = 41.0
+offset_right = 473.0
+offset_bottom = 137.0
+texture_normal = ExtResource("3_lnu2h")
+taxon_code = "dowwoo"
+
+[node name="Hairy" parent="Woodpeckers" unique_id=1366567008 instance=ExtResource("2_yqjtg")]
+offset_left = 536.0
+offset_top = 41.0
+offset_right = 632.0
+offset_bottom = 137.0
+texture_normal = ExtResource("6_p57ef")
+taxon_code = "haiwoo"
