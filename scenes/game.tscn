@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://c3cr2btkm52qo" path="res://assets/sprites/woodpeckers/beawoo.png" id="9_kvpfn"]
 [ext_resource type="Texture2D" uid="uid://bfo1lbdqmsfyb" path="res://assets/sprites/woodpeckers/powwoo.png" id="10_dinhu"]
 [ext_resource type="Texture2D" uid="uid://c1ny4auqylpv3" path="res://assets/sprites/woodpeckers/crcwoo.png" id="11_kvuet"]
+[ext_resource type="FontFile" uid="uid://bwab4r4u3deb6" path="res://assets/AcPlus_IBM_BIOS_ao.ttf" id="12_dinhu"]
 
 [node name="Game" type="Node2D" unique_id=1866045924]
 
@@ -20,7 +21,7 @@ script = ExtResource("1_lbhrr")
 
 [node name="Pyre" parent="." unique_id=386602154 instance=ExtResource("1_uwrxv")]
 unique_name_in_owner = true
-position = Vector2(200, 305)
+position = Vector2(104, 180)
 
 [node name="Woodpeckers" type="Node" parent="." unique_id=1631324777]
 
@@ -96,15 +97,17 @@ texture_normal = ExtResource("11_kvuet")
 taxon_code = "crcwoo"
 
 [node name="CounterLabel" type="Label" parent="." unique_id=1223603921]
-offset_left = 5.0
-offset_top = 599.0
-offset_right = 300.0
-offset_bottom = 632.0
-text = "You've struck X times in Y seconds"
+offset_left = 7.0
+offset_top = 571.0
+offset_right = 527.0
+offset_bottom = 604.0
+theme_override_fonts/font = ExtResource("12_dinhu")
+text = "Click on the purple woodpecker to drum!"
 
 [node name="PlayingLabel" type="Label" parent="." unique_id=1442394708]
-offset_left = 3.0
-offset_top = 561.0
-offset_right = 414.0
-offset_bottom = 596.0
-text = "Playing X drum"
+offset_left = 13.0
+offset_top = 606.0
+offset_right = 424.0
+offset_bottom = 641.0
+theme_override_fonts/font = ExtResource("12_dinhu")
+text = "Try to get over 12 strikes a second!"

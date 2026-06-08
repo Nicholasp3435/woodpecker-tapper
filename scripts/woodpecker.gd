@@ -15,10 +15,10 @@ const WOODPECKER_IMAGE_PATH: String = "res://assets/sprites/woodpeckers/";
 			update_self()
 
 var data: Dictionary = {};
-var max_time: float = 0;
 
 func _ready():
 	update_self();
+
 
 func update_self():
 	if taxon_code == "":
@@ -27,14 +27,13 @@ func update_self():
 	var image_path: String = WOODPECKER_IMAGE_PATH + taxon_code + ".png";
 	texture_normal = load(image_path);
 	
-	data = game_manager.woodpecker_data[taxon_code]
-	max_time = data["data"][-1]["timer"] / 1000;
+	data = game_manager.WOODPECKER_DATA[taxon_code]
 	
 	label.text = data["name"];
+
 
 func _on_button_up() -> void:
 	if pyre.cur_state != pyre.Drumming_States.IDLE:
 		return;
 		
-	pyre.sample_timer.wait_time = max_time;
-	game_manager.handle_pattern(data);
+	pyre.handle_pattern(data);
