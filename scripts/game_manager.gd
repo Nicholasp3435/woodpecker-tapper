@@ -38,4 +38,7 @@ func _on_recording_toggle_toggled(toggled_on: bool) -> void:
 		endless_toggle.visible = true;
 
 func _on_replay_button_button_up() -> void:
+	if pyre.cur_state != pyre.Drumming_States.IDLE:
+		return;
+
 	pyre.handle_pattern(pyre.recorded_drum_data)
