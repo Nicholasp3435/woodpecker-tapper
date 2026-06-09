@@ -18,7 +18,6 @@ var recorded_drum_data: Dictionary = {
 	"image-source": "",
 	"data": []
 }
-
 var time_elapsed: float = 0.0;
 var time_max: float = 1.0;
 
@@ -51,8 +50,6 @@ func _process(delta: float) -> void:
 			game_manager.counter_label.text += 's';
 	else:
 		game_manager.counter_label.text = result;
-		
-		
 
 func _input(event: InputEvent) -> void:		
 	if cur_state == Drumming_States.IDLE or cur_state == Drumming_States.USER:
@@ -108,11 +105,12 @@ func handle_strike(volume: float, is_user: bool):
 func handle_pattern(data: Dictionary):
 	game_manager.playing_label.text = "Playing a " + data["name"] + "'s drum";
 	time_max = data["data"][-1]["timer"] / 1000;
+	var time_min: float = data["data"][0]["timer"] / 1000;
 	
 	for strike in data["data"]:
 		var time: float = strike["timer"] / 1000;
 		var volume: float = strike["volume"];
-		get_tree().create_timer(time).timeout.connect(func(): handle_strike(volume, false));
+		get_tree().create_timer(time - time_min).timeout.connect(func(): handle_strike(volume, false));
 
 
 func _on_area_2d_mouse_entered() -> void:

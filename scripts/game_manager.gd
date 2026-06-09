@@ -32,6 +32,13 @@ func _on_recording_toggle_toggled(toggled_on: bool) -> void:
 		replay_button.visible = false;
 		endless_toggle.visible = false;
 		pyre.time_elapsed = 0;
+		pyre.recorded_drum_data = {
+			"name": "recording",
+			"source": "",
+			"source-time": 0,
+			"image-source": "",
+			"data": []
+		}
 	else:
 		pyre.in_recording_mode = false;
 		replay_button.visible = true;
@@ -40,5 +47,4 @@ func _on_recording_toggle_toggled(toggled_on: bool) -> void:
 func _on_replay_button_button_up() -> void:
 	if pyre.cur_state != pyre.Drumming_States.IDLE:
 		return;
-
-	pyre.handle_pattern(pyre.recorded_drum_data)
+	pyre.handle_pattern(pyre.recorded_drum_data);
