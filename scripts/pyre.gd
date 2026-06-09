@@ -1,10 +1,10 @@
-extends Node2D
+extends Node2D;
 
 var mouse_in: bool = false;
 
-@onready var game_manager: Node = %GameManager
-@onready var drum_timer: Timer = $DrumTimer
-@onready var delay_timer: Timer = $DelayTimer
+@onready var game_manager: Node = %GameManager;
+@onready var drum_timer: Timer = $DrumTimer;
+@onready var delay_timer: Timer = $DelayTimer;
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D;
 
 
@@ -21,18 +21,17 @@ var cur_state: int = Drumming_States.IDLE;
 
 
 func _process(delta: float) -> void:
-	if cur_state == Drumming_States.IDLE or cur_state == Drumming_States.DELAY:
-		return;
+	var result: String = "You've struck " + str(strike_count) + " times";
 		
 	time_elapsed += delta;
 	if time_elapsed > time_max:
-		time_elapsed = time_max
+		time_elapsed = time_max;
 	
-	game_manager.counter_label.text = ("You've struck " + str(strike_count) +
-		" times in " + str(snapped(time_elapsed, 0.01)) + " second");
+	game_manager.counter_label.text = result + " in " + str(snapped(time_elapsed, 0.01)) + " second";
 		
 	if (snapped(time_elapsed, 0.01) != 1):
 		game_manager.counter_label.text += 's';
+		
 
 func _input(event: InputEvent) -> void:
 	if cur_state == Drumming_States.IDLE or cur_state == Drumming_States.USER:
@@ -48,34 +47,42 @@ func _input(event: InputEvent) -> void:
 
 func play_strike(volume: float):
 	var audio_player: AudioStreamPlayer = AudioStreamPlayer.new();
-	var stream: AudioStream = WOODPECKER_STRIKE;
 	add_child(audio_player);
-	audio_player.stream = stream;
+	audio_player.stream = WOODPECKER_STRIKE;
 	audio_player.volume_linear = volume;
 	audio_player.play();
 	audio_player.finished.connect(audio_player.queue_free);
 
 func handle_strike(volume: float, is_user: bool):
-	if cur_state == Drumming_States.IDLE:
-		if is_user:
-			cur_state = Drumming_States.USER;
-		else:
-			cur_state = Drumming_States.SAMPLE;
+	if game_manager.cur_state == game_manager.Game_States.TIMER:
+		if cur_state == Drumming_States.IDLE:
+			if is_user:
+				cur_state = Drumming_States.USER;
+			else:
+				cur_state = Drumming_States.SAMPLE;
 
-		drum_timer.wait_time = time_max;
-		strike_count = 0;
-		time_elapsed = 0;
-		drum_timer.start();
-		
+			drum_timer.wait_time = time_max;
+
+			strike_count = 0;
+			time_elapsed = 0;
+			drum_timer.start();
+	else:
+		if !is_user and cur_state == Drumming_States.IDLE:
+			cur_state = Drumming_States.SAMPLE;
+			drum_timer.wait_time = time_max;
+			time_elapsed = 0;
+			drum_timer.start();
+			
 	if !is_user:
 		animated_sprite.play("strike");
-	
+			
 	strike_count += 1;
-	play_strike(volume)
+	play_strike(volume);
 	
 func handle_pattern(data: Dictionary):
 	game_manager.playing_label.text = "Playing a " + data["name"] + "'s drum";
 	time_max = data["data"][-1]["timer"] / 1000;
+	
 	for strike in data["data"]:
 		var time: float = strike["timer"] / 1000;
 		var volume: float = strike["volume"];
@@ -94,7 +101,7 @@ func _on_area_2d_mouse_exited() -> void:
 	if cur_state != Drumming_States.SAMPLE:
 		animated_sprite.play("idle");
 
-func _on_sample_timer_timeout() -> void:
+func _on_drum_timer_timeout() -> void:
 	if cur_state == Drumming_States.SAMPLE:
 		animated_sprite.play("hover");
 	else:
@@ -107,7 +114,7 @@ func _on_sample_timer_timeout() -> void:
 			
 		game_manager.playing_label.text = result;
 		
-	cur_state = Drumming_States.DELAY
+	cur_state = Drumming_States.DELAY;
 	delay_timer.start();
 
 func _on_delay_timer_timeout() -> void:

@@ -66,6 +66,8 @@ one_shot = true
 sprite_frames = SubResource("SpriteFrames_yuc2f")
 animation = &"strike"
 autoplay = "idle"
+frame = 1
+frame_progress = 1.0
 
 [node name="Area2D" type="Area2D" parent="." unique_id=137122845]
 
@@ -73,7 +75,7 @@ autoplay = "idle"
 position = Vector2(-8, 4)
 shape = SubResource("CapsuleShape2D_tolfl")
 
-[connection signal="timeout" from="DrumTimer" to="." method="_on_sample_timer_timeout"]
+[connection signal="timeout" from="DrumTimer" to="." method="_on_drum_timer_timeout"]
 [connection signal="timeout" from="DelayTimer" to="." method="_on_delay_timer_timeout"]
 [connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]
