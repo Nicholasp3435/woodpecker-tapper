@@ -11,6 +11,14 @@ var mouse_in: bool = false;
 const WOODPECKER_STRIKE: AudioStreamMP3 = preload("uid://bnjd0f1fhcg6c");
 const SPEED_TO_BEAT: int = 12;
 
+var recorded_drum_data: Dictionary = {
+	"name": "recording",
+	"source": "",
+	"source-time": 0,
+	"image-source": "",
+	"data": []
+}
+
 var time_elapsed: float = 0.0;
 var time_max: float = 1.0;
 
@@ -19,21 +27,34 @@ var strike_count: int = 0;
 enum Drumming_States {IDLE, USER, SAMPLE, DELAY};
 var cur_state: int = Drumming_States.IDLE;
 
+var in_recording_mode: bool = false;
+
+var has_started: bool = false;
 
 func _process(delta: float) -> void:
-	var result: String = "You've struck " + str(strike_count) + " times";
-		
-	time_elapsed += delta;
-	if time_elapsed > time_max:
-		time_elapsed = time_max;
+	if !has_started:
+		return;
 	
-	game_manager.counter_label.text = result + " in " + str(snapped(time_elapsed, 0.01)) + " second";
+	var result: String = "You've struck " + str(strike_count) + " times";
+	time_elapsed += delta; # this is fine for ~115 days of constant running
+	
+	if game_manager.cur_state == game_manager.Game_States.TIMER:
+		var displayed_time: String;
+		if time_elapsed <= time_max:
+			displayed_time = str(snapped(time_elapsed, 0.01));
+		else:
+			displayed_time = str(snapped(time_max, 0.01));
 		
-	if (snapped(time_elapsed, 0.01) != 1):
-		game_manager.counter_label.text += 's';
+		game_manager.counter_label.text = result + " in " + displayed_time + " second";
+			
+		if (snapped(time_elapsed, 0.01) != 1):
+			game_manager.counter_label.text += 's';
+	else:
+		game_manager.counter_label.text = result;
+		
 		
 
-func _input(event: InputEvent) -> void:
+func _input(event: InputEvent) -> void:		
 	if cur_state == Drumming_States.IDLE or cur_state == Drumming_States.USER:
 		if event.is_action_pressed("strike") and mouse_in:
 			animated_sprite.play("strike");
@@ -54,6 +75,12 @@ func play_strike(volume: float):
 	audio_player.finished.connect(audio_player.queue_free);
 
 func handle_strike(volume: float, is_user: bool):
+	if !has_started:
+		has_started = true;
+		
+	if in_recording_mode:
+		recorded_drum_data["data"].append({"volume": volume, "timer": time_elapsed * 1000});
+		
 	if game_manager.cur_state == game_manager.Game_States.TIMER:
 		if cur_state == Drumming_States.IDLE:
 			if is_user:
@@ -70,7 +97,6 @@ func handle_strike(volume: float, is_user: bool):
 		if !is_user and cur_state == Drumming_States.IDLE:
 			cur_state = Drumming_States.SAMPLE;
 			drum_timer.wait_time = time_max;
-			time_elapsed = 0;
 			drum_timer.start();
 			
 	if !is_user:

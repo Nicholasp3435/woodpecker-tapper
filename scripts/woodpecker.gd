@@ -35,5 +35,4 @@ func update_self():
 func _on_button_up() -> void:
 	if pyre.cur_state != pyre.Drumming_States.IDLE:
 		return;
-		
 	pyre.handle_pattern(data);
