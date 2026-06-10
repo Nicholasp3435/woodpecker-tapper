@@ -849,5 +849,51 @@
 				"timer": 103
 			}
 		]
+	},
+	"pygwoo":
+	{
+		"name": "Japanese Pygmy Woodpecker",
+		"source": "https://macaulaylibrary.org/asset/100150271",
+		"source-time": 12,
+		"image-source": "https://macaulaylibrary.org/asset/24366071",
+		"data":
+		[
+			{
+				"volume": 1,
+				"timer": 11
+			},
+			{
+				"volume": 0.95,
+				"timer": 48
+			},
+			{
+				"volume": 0.95,
+				"timer": 81
+			},
+			{
+				"volume": 1,
+				"timer": 112
+			},
+			{
+				"volume": 0.65,
+				"timer": 143
+			},
+			{
+				"volume": 0.65,
+				"timer": 173
+			},
+			{
+				"volume": 0.6,
+				"timer": 202
+			},
+			{
+				"volume": 0.4,
+				"timer": 228
+			},
+			{
+				"volume": 0.3,
+				"timer": 260
+			}
+		]
 	}
 }

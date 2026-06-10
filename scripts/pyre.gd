@@ -103,6 +103,10 @@ func handle_strike(volume: float, is_user: bool):
 	play_strike(volume);
 	
 func handle_pattern(data: Dictionary):
+	if data["data"].is_empty():
+		game_manager.playing_label.text = "This data does not exist!"
+		return;
+	
 	game_manager.playing_label.text = "Playing a " + data["name"] + "'s drum";
 	time_max = data["data"][-1]["timer"] / 1000;
 	var time_min: float = data["data"][0]["timer"] / 1000;

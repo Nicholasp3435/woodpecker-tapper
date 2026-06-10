@@ -5,9 +5,9 @@ extends Node;
 @onready var counter_label: Label = $"../CounterLabel";
 @onready var playing_label: Label = $"../PlayingLabel";
 
-@onready var endless_toggle: TextureButton = $"../EndlessToggle"
-@onready var recording_toggle: TextureButton = $"../RecordingToggle"
-@onready var replay_button: TextureButton = $"../ReplayButton"
+@onready var endless_toggle: TextureButton = $"../ButtonContainer/EndlessToggle"
+@onready var recording_toggle: TextureButton = $"../ButtonContainer/RecordingToggle"
+@onready var replay_button: TextureButton = $"../ButtonContainer/ReplayButton"
 
 const WOODPECKER_DATA: Dictionary = preload("res://assets/woodpecker_data.json").data;
 
