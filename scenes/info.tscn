@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://pd03sj3psbam"]
+
+[ext_resource type="FontFile" uid="uid://bwab4r4u3deb6" path="res://assets/AcPlus_IBM_BIOS_ao.ttf" id="1_6cmwp"]
+[ext_resource type="Texture2D" uid="uid://dqbfxwmw8dd4u" path="res://assets/maps/dowwoo.jpeg" id="2_1t52y"]
+[ext_resource type="Texture2D" uid="uid://rvbyt8iye7ol" path="res://assets/sprites/woodpeckers/dowwoo.png" id="3_kin2u"]
+
+[node name="Info" type="Control" unique_id=771422554]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -338.0
+offset_bottom = -169.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1666085728]
+layout_mode = 0
+offset_right = 960.0
+offset_bottom = 540.0
+color = Color(0, 0, 0, 0.7529412)
+
+[node name="CommonName" type="RichTextLabel" parent="." unique_id=996718329]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 26.0
+offset_right = 685.0
+offset_bottom = 66.0
+theme_override_fonts/normal_font = ExtResource("1_6cmwp")
+theme_override_font_sizes/normal_font_size = 24
+text = "Downy Woodpecker"
+
+[node name="ScientificName" type="RichTextLabel" parent="." unique_id=1228385962]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 66.0
+offset_right = 685.0
+offset_bottom = 106.0
+theme_override_fonts/normal_font = ExtResource("1_6cmwp")
+theme_override_fonts/italics_font = ExtResource("1_6cmwp")
+theme_override_font_sizes/normal_font_size = 25
+bbcode_enabled = true
+text = "[u][i]Dryobates pubescens[/i][/u]"
+
+[node name="Brief" type="RichTextLabel" parent="." unique_id=426886633]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 307.0
+offset_right = 486.0
+offset_bottom = 532.0
+theme_override_constants/line_separation = 8
+theme_override_fonts/normal_font = ExtResource("1_6cmwp")
+theme_override_fonts/italics_font = ExtResource("1_6cmwp")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "The smallest and one of the most widespread of North American woodpeckers, the Downy Woodpecker is a year-round resident coast to coast and from the tree line in Canada and Alaska to south Florida and the riparian forests of southern California."
+
+[node name="IUCN" type="RichTextLabel" parent="." unique_id=88019827]
+layout_mode = 0
+offset_left = 374.0
+offset_top = 26.0
+offset_right = 509.0
+offset_bottom = 83.0
+theme_override_fonts/normal_font = ExtResource("1_6cmwp")
+theme_override_fonts/italics_font = ExtResource("1_6cmwp")
+theme_override_font_sizes/normal_font_size = 24
+bbcode_enabled = true
+text = "(LC)"
+
+[node name="Dowwoo" type="Sprite2D" parent="." unique_id=1883531235]
+position = Vector2(718, 253)
+scale = Vector2(0.36569428, 0.36569425)
+texture = ExtResource("2_1t52y")
+
+[node name="Dowwoo2" type="Sprite2D" parent="." unique_id=493994372]
+position = Vector2(238.00002, 192.00002)
+scale = Vector2(1.8502603, 1.8502603)
+texture = ExtResource("3_kin2u")
