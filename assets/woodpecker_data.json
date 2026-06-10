@@ -1,47 +1,13 @@
 {
-	"secret1":
-	{
-		"name": "secret one",
-		"source": "",
-		"source-time": "",
-		"data":
-		[
-			{
-				"volume": 1,
-				"timer": 146
-			},
-			{
-				"volume": 1,
-				"timer": 524
-			},
-			{
-				"volume": 1,
-				"timer": 710
-			},
-			{
-				"volume": 1,
-				"timer": 913
-			},
-			{
-				"volume": 1,
-				"timer": 1279
-			},
-			{
-				"volume": 1,
-				"timer": 2040
-			},
-			{
-				"volume": 1,
-				"timer": 2411
-			}
-		]
-	},
 	"yebsap": 
 	{
 		"name": "Yellow-bellied Sapsucker",
+		"scientific": "Sphyrapicus varius",
+		"iucn": "LC",
 		"source": "https://macaulaylibrary.org/asset/83128811",
 		"source-time": 17,
 		"image-source": "https://macaulaylibrary.org/asset/157574821",
+		"brief": "Widely known in North American folklore for its amusing name, this woodpecker creates shallow holes (sap wells) in the bark of trees and feeds on sap that flows into them. Like other sapsuckers, the Yellow-bellied Sapsucker creates elaborate systems of such sap wells and maintains them daily to ensure sap production, defending the wells from other birds, including other sapsuckers.",
 		"data": 
 		[
 			{
@@ -165,9 +131,12 @@
 	"pilwoo": 
 	{
 		"name": "Pileated Woodpecker",
+		"scientific": "Dryocopus pileatus",
+		"iucn": "LC",
 		"source": "https://macaulaylibrary.org/asset/63086",
 		"source-time": 42,
 		"image-source": "https://macaulaylibrary.org/asset/94379711",
+		"brief": "Best recognized by its large, dull black body and red crest, the Pileated Woodpecker is a permanent resident of deciduous, coniferous, or mixed forests in southern Canada and in the western, midwestern, and eastern United States. Dead and deteriorating live trees provide favored sites in which to excavate nest cavities, and hollow trees are typically used to roost in at night.",
 		"data": 
 		[
 			{
@@ -328,7 +297,7 @@
 		"source": "https://macaulaylibrary.org/asset/44905",
 		"source-time": 7,
 		"image-source": "https://macaulaylibrary.org/asset/50580161",
-		"brief": "The smallest and one of the most widespread of North American woodpeckers, the Downy Woodpecker is a year-round resident coast to coast and from the tree line in Canada and Alaska to south Florida and the riparian forests of southern California.",
+		"brief": "The smallest and one of the most widespread of North American woodpeckers, the Downy Woodpecker is a year-round resident coast to coast and from the tree line in Canada and Alaska to south Florida and the riparian forests of southern California. It is primarily insectivorous, focusing its foraging activities on surfaces, bark crevices, and shallow excavations of trees, shrubs, and woody weeds.",
 		"data": 
 		[
 			{
@@ -549,9 +518,12 @@
 	"grswoo": 
 	{
 		"name": "Great Spotted Woodpecker",
+		"scientific": "Dendrocopos major",
+		"iucn": "LC",
 		"source": "https://macaulaylibrary.org/asset/202206891",
 		"source-time": 21,
 		"image-source": "https://macaulaylibrary.org/asset/163401241",
+		"brief": "The great spotted woodpecker is a medium-sized woodpecker with pied black and white plumage and a red patch on the lower belly. Males and young birds also have red markings on the neck or head. This species is found across the Palearctic including parts of North Africa.",
 		"data": 
 		[
 			{
@@ -603,9 +575,12 @@
 	"whbwoo": 
 	{
 		"name": "White-backed Woodpecker",
+		"scientific": "Dendrocopos leucotos",
+		"iucn": "LC",
 		"source": "https://macaulaylibrary.org/asset/322224871",
 		"source-time": 31,
 		"image-source": "https://macaulaylibrary.org/asset/636021019",
+		"brief": "Considered to be an umbrella species for inconspicuous dead-wood-living insects and fungi, the White-backed Woodpecker is dependent on old-growth deciduous and mixed forests for both feeding and nesting. This association with primeval or near-primeval forest is primarily due to the bird's specialized diet, which is largely comprised of saproxylic Coleoptera (beetles that feed on decaying wood) and the wood-boring larvae of some Lepidoptera, which only occur in older, unmanaged forests.",
 		"data": 
 		[
 			{
@@ -737,9 +712,12 @@
 	"crcwoo":
 	{
 		"name": "Crimson-crested Woodpecker",
+		"scientific": "Campephilus melanoleucos",
+		"iucn": "LC",
 		"source": "https://macaulaylibrary.org/asset/65161",
 		"source-time": 5,
 		"image-source": "https://macaulaylibrary.org/asset/112180011",
+		"brief": "Crimson-crested Woodpecker is the most widespread species of Campephilus. It occurs regularly from Panama south to northern Argentina, including across the Guianan Shield and throughout Amazonia. It is a very large, robust woodpecker with a large red crest. They are found in lowland forest and edges, often perched conspicuously high up on a snag or large tree.",
 		"data":
 		[
 			{
@@ -775,9 +753,12 @@
 	"beawoo":
 	{
 		"name": "Bearded Woodpecker",
+		"scientific": "Chloropicus namaquus",
+		"iucn": "LC",
 		"source": "https://macaulaylibrary.org/asset/622920673",
 		"source-time": 31,
 		"image-source": "https://macaulaylibrary.org/asset/119421471",
+		"brief": "The bearded woodpecker is one of the largest woodpeckers in Africa growing to a length of about 25 cm (10 in). The head is distinctive with a black moustache, a broad black eye-stripe and black crown contrasting with a white supercilium, face, chin and throat. It forages solitarily or in pairs, preferring dead and decaying trunks where it can excavate for beetle larvae and other insects within savanna and riverine forest.",
 		"data":
 		[
 			{
@@ -841,9 +822,12 @@
 	"powwoo": 
 	{
 		"name": "Powerful Woodpecker",
+		"scientific": "Campephilus pollens",
+		"iucn": "LC",
 		"source": "https://macaulaylibrary.org/asset/84098",
 		"source-time": 7,
 		"image-source": "https://macaulaylibrary.org/asset/109831141",
+		"brief": "The Powerful Woodpecker is a resident of the Andes, from central Colombia to Peru. These large woodpeckers are often found in pairs in a variety of habitat types including mature montane forest, wet forest and cloudforest. These pairs wander widely throughout the forest, so they are infrequently encountered.",
 		"data": 
 		[
 			{
@@ -859,9 +843,12 @@
 	"pygwoo":
 	{
 		"name": "Japanese Pygmy Woodpecker",
+		"scientific": "Yungipicus kizuki",
+		"iucn": "LC",
 		"source": "https://macaulaylibrary.org/asset/100150271",
 		"source-time": 12,
 		"image-source": "https://macaulaylibrary.org/asset/24366071",
+		"brief": "The Japanese pygmy woodpecker, or simply pygmy woodpecker, is a small black-and-white woodpecker with round-headed and short-billed profile. The Japanese pygmy woodpecker occurs in pairs and mixed-species foraging flocks, searching on trees for invertebrates, such as spiders, caterpillars, ants and aphids, and berries.",
 		"data":
 		[
 			{

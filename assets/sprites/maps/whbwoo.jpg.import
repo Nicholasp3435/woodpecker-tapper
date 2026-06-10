@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://btro2kx5yjwbf"
-path="res://.godot/imported/haiwoo.jpeg-eea88ad4b884022971ecb589a8eab816.ctex"
+uid="uid://beqqjalr2867k"
+path="res://.godot/imported/whbwoo.jpg-ad9a68244887fe223c2e65df4baef6b5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/maps/haiwoo.jpeg"
-dest_files=["res://.godot/imported/haiwoo.jpeg-eea88ad4b884022971ecb589a8eab816.ctex"]
+source_file="res://assets/sprites/maps/whbwoo.jpg"
+dest_files=["res://.godot/imported/whbwoo.jpg-ad9a68244887fe223c2e65df4baef6b5.ctex"]
 
 [params]
 

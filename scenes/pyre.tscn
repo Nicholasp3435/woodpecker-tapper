@@ -64,10 +64,8 @@ one_shot = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=829258015]
 sprite_frames = SubResource("SpriteFrames_yuc2f")
-animation = &"strike"
+animation = &"idle"
 autoplay = "idle"
-frame = 1
-frame_progress = 1.0
 
 [node name="Area2D" type="Area2D" parent="." unique_id=137122845]
 

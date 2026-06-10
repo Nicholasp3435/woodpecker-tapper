@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dqbfxwmw8dd4u"
-path="res://.godot/imported/dowwoo.jpeg-7d432e827aa0fe0f0e023d2a6e9b90b4.ctex"
+uid="uid://duco4sop7p6nv"
+path="res://.godot/imported/beawoo.jpg-ddbac88887e24580694b88df35586058.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/maps/dowwoo.jpeg"
-dest_files=["res://.godot/imported/dowwoo.jpeg-7d432e827aa0fe0f0e023d2a6e9b90b4.ctex"]
+source_file="res://assets/sprites/maps/beawoo.jpg"
+dest_files=["res://.godot/imported/beawoo.jpg-ddbac88887e24580694b88df35586058.ctex"]
 
 [params]
 

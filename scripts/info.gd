@@ -39,7 +39,14 @@ func update_self():
 	data = game_manager.WOODPECKER_DATA[taxon_code]
 	
 	icon.texture = load(WOODPECKER_IMAGE_PATH + taxon_code + ".png");
-	map.texture = load(DISTRIBUTION_IMAGE_MAP + taxon_code + ".jpeg");
+	map.texture = load(DISTRIBUTION_IMAGE_MAP + taxon_code + ".jpg");
+	
+	if map.texture.get_width() - map.texture.get_height() >= 0:
+		# horizontal / square
+		map.scale = Vector2(1./3, 1./3);
+	else:
+		# vertical
+		map.scale = Vector2(0.4, 0.4);
 	
 	common_name.text = data["name"];
 	scientific_name.text = "[u][i]" + data["scientific"] + "[/i][/u]";
