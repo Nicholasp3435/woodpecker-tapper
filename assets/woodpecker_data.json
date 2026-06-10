@@ -323,9 +323,12 @@
 	"dowwoo": 
 	{
 		"name": "Downy Woodpecker",
+		"scientific": "Dryobates pubescens",
+		"iucn": "LC",
 		"source": "https://macaulaylibrary.org/asset/44905",
 		"source-time": 7,
 		"image-source": "https://macaulaylibrary.org/asset/50580161",
+		"brief": "The smallest and one of the most widespread of North American woodpeckers, the Downy Woodpecker is a year-round resident coast to coast and from the tree line in Canada and Alaska to south Florida and the riparian forests of southern California.",
 		"data": 
 		[
 			{
@@ -393,9 +396,12 @@
 	"haiwoo": 
 	{
 		"name": "Hairy Woodpecker",
+		"scientific": "Leuconotopicus villosus",
+		"iucn": "LC",
 		"source": "https://macaulaylibrary.org/asset/211304391",
 		"source-time": 66,
 		"image-source": "https://macaulaylibrary.org/asset/303463251",
+		"brief": "Dappled black and white, like light filtering through the forest canopy onto a tree trunk, the Hairy Woodpecker is among the most widespread North American birds. It is resident in forest and woodland habitats from near treeline in the far north and on mountains to the highlands of western Panama, many continental islands, and some islands of the Bahamas",
 		"data": 
 		[
 			{

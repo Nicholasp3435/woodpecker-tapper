@@ -1,53 +1,52 @@
 [gd_scene format=3 uid="uid://pd03sj3psbam"]
 
+[ext_resource type="Script" uid="uid://srfqhxnja7s" path="res://scripts/info.gd" id="1_3wikv"]
 [ext_resource type="FontFile" uid="uid://bwab4r4u3deb6" path="res://assets/AcPlus_IBM_BIOS_ao.ttf" id="1_6cmwp"]
-[ext_resource type="Texture2D" uid="uid://dqbfxwmw8dd4u" path="res://assets/maps/dowwoo.jpeg" id="2_1t52y"]
+[ext_resource type="Texture2D" uid="uid://dqbfxwmw8dd4u" path="res://assets/sprites/maps/dowwoo.jpeg" id="2_1t52y"]
 [ext_resource type="Texture2D" uid="uid://rvbyt8iye7ol" path="res://assets/sprites/woodpeckers/dowwoo.png" id="3_kin2u"]
 
-[node name="Info" type="Control" unique_id=771422554]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = -338.0
-offset_bottom = -169.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Info" type="TabContainer" unique_id=1797491458]
+offset_right = 425.0
+offset_bottom = 600.0
+theme_override_fonts/font = ExtResource("1_6cmwp")
+theme_override_font_sizes/font_size = 14
+current_tab = 0
+script = ExtResource("1_3wikv")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1666085728]
-layout_mode = 0
-offset_right = 960.0
-offset_bottom = 540.0
-color = Color(0, 0, 0, 0.7529412)
+[node name="General" type="Control" parent="." unique_id=1842154020]
+layout_mode = 2
+metadata/_tab_index = 0
 
-[node name="CommonName" type="RichTextLabel" parent="." unique_id=996718329]
+[node name="CommonName" type="RichTextLabel" parent="General" unique_id=1921204599]
 layout_mode = 0
-offset_left = 28.0
-offset_top = 26.0
-offset_right = 685.0
-offset_bottom = 66.0
+offset_right = 425.0
+offset_bottom = 72.0
+theme_override_constants/line_separation = 8
 theme_override_fonts/normal_font = ExtResource("1_6cmwp")
 theme_override_font_sizes/normal_font_size = 24
-text = "Downy Woodpecker"
+text = "Downy woodpecker"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="ScientificName" type="RichTextLabel" parent="." unique_id=1228385962]
+[node name="ScientificName" type="RichTextLabel" parent="General" unique_id=1617005310]
 layout_mode = 0
-offset_left = 28.0
 offset_top = 66.0
-offset_right = 685.0
-offset_bottom = 106.0
+offset_right = 425.0
+offset_bottom = 97.0
 theme_override_fonts/normal_font = ExtResource("1_6cmwp")
 theme_override_fonts/italics_font = ExtResource("1_6cmwp")
 theme_override_font_sizes/normal_font_size = 25
 bbcode_enabled = true
 text = "[u][i]Dryobates pubescens[/i][/u]"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="Brief" type="RichTextLabel" parent="." unique_id=426886633]
+[node name="Brief" type="RichTextLabel" parent="General" unique_id=220231658]
 layout_mode = 0
-offset_left = 19.0
-offset_top = 307.0
-offset_right = 486.0
-offset_bottom = 532.0
+offset_left = 10.0
+offset_top = 287.0
+offset_right = 414.0
+offset_bottom = 559.0
 theme_override_constants/line_separation = 8
 theme_override_fonts/normal_font = ExtResource("1_6cmwp")
 theme_override_fonts/italics_font = ExtResource("1_6cmwp")
@@ -55,24 +54,40 @@ theme_override_font_sizes/normal_font_size = 16
 bbcode_enabled = true
 text = "The smallest and one of the most widespread of North American woodpeckers, the Downy Woodpecker is a year-round resident coast to coast and from the tree line in Canada and Alaska to south Florida and the riparian forests of southern California."
 
-[node name="IUCN" type="RichTextLabel" parent="." unique_id=88019827]
+[node name="IUCNColor" type="ColorRect" parent="General" unique_id=208948768]
 layout_mode = 0
-offset_left = 374.0
-offset_top = 26.0
-offset_right = 509.0
-offset_bottom = 83.0
+offset_left = 309.0
+offset_top = 150.0
+offset_right = 409.0
+offset_bottom = 200.0
+color = Color(0.37254903, 0.7764706, 0.34901962, 1)
+
+[node name="IUCN" type="RichTextLabel" parent="General" unique_id=2045589092]
+layout_mode = 0
+offset_left = 322.0
+offset_top = 148.0
+offset_right = 395.0
+offset_bottom = 203.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("1_6cmwp")
 theme_override_fonts/italics_font = ExtResource("1_6cmwp")
 theme_override_font_sizes/normal_font_size = 24
 bbcode_enabled = true
-text = "(LC)"
+text = "LC"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="Dowwoo" type="Sprite2D" parent="." unique_id=1883531235]
-position = Vector2(718, 253)
-scale = Vector2(0.36569428, 0.36569425)
-texture = ExtResource("2_1t52y")
-
-[node name="Dowwoo2" type="Sprite2D" parent="." unique_id=493994372]
-position = Vector2(238.00002, 192.00002)
+[node name="Icon" type="Sprite2D" parent="General" unique_id=952211851]
+position = Vector2(212, 186.00002)
 scale = Vector2(1.8502603, 1.8502603)
 texture = ExtResource("3_kin2u")
+
+[node name="Distribution" type="Control" parent="." unique_id=871046642]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="Map" type="Sprite2D" parent="Distribution" unique_id=2025221796]
+position = Vector2(218, 267)
+scale = Vector2(0.36569428, 0.36569425)
+texture = ExtResource("2_1t52y")

@@ -35,4 +35,6 @@ func update_self():
 func _on_button_up() -> void:
 	if pyre.cur_state != pyre.Drumming_States.IDLE:
 		return;
+	
+	game_manager.info.taxon_code = self.taxon_code;
 	pyre.handle_pattern(data);
