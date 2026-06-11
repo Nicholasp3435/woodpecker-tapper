@@ -16,16 +16,24 @@ extends Control;
 const WOODPECKER_IMAGE_PATH: String = "res://assets/sprites/woodpeckers/";
 const DISTRIBUTION_IMAGE_MAP: String = "res://assets/sprites/maps/";
 
-const IUCN_COLORS: Dictionary =  {"LC" = "#60c659", "NT" = "#cce227", "VU" = "#f9e814",
-								  "EN" = "#fc7f3f", "CR" = "#da1c01", "EW" = "#542343",
-								  "EX" = "#000000", "DD" = "#d1d1c4", "NE" = "#ffffff"};
+const IUCN_COLORS: Dictionary =  {
+	"LC" = {"bg" = "#60c659", "fg" = 0 },
+	"NT" = {"bg" = "#d1e744", "fg" = 0 }, 
+	"VU" = {"bg" = "#e5d42d", "fg" = 0 },
+	"EN" = {"bg" = "#e77b4d", "fg" = 0 }, 
+	"CR" = {"bg" = "#b61917", "fg" = 1 }, 
+	"EW" = {"bg" = "#542344", "fg" = 1 },
+	"EX" = {"bg" = "#000000", "fg" = 1 }, 
+	"DD" = {"bg" = "#595959", "fg" = 1 }, 
+	"NE" = {"bg" = "#cccccc", "fg" = 0 }
+};
 
 ## Macaulay Library taxon code
 @export var taxon_code: String = "":
 	set(value):
 		taxon_code = value
 		if is_node_ready():
-			update_self()
+			update_self();
 
 var data: Dictionary = {};
 
@@ -53,7 +61,12 @@ func update_self():
 	brief.text = data["brief"];
 	
 	var iucn_cat: String = data["iucn"];
-	iucn_color.color = IUCN_COLORS[iucn_cat];
+	iucn_color.color = IUCN_COLORS[iucn_cat]["bg"];
+	
+	if IUCN_COLORS[iucn_cat]["fg"] == 0:
+		iucn.add_theme_color_override("default_color", "#000000");
+	else:
+		iucn.add_theme_color_override("default_color", "#ffffff")
 	iucn.text = iucn_cat;
 
 

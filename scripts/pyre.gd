@@ -11,13 +11,7 @@ var mouse_in: bool = false;
 const WOODPECKER_STRIKE: AudioStreamMP3 = preload("uid://bnjd0f1fhcg6c");
 const SPEED_TO_BEAT: int = 12;
 
-var recorded_drum_data: Dictionary = {
-	"name": "recording",
-	"source": "",
-	"source-time": 0,
-	"image-source": "",
-	"data": []
-}
+var recorded_drum_data: Array = [];
 var time_elapsed: float = 0.0;
 var time_max: float = 1.0;
 
@@ -34,20 +28,25 @@ func _process(delta: float) -> void:
 	if !has_started:
 		return;
 	
-	var result: String = "You've struck " + str(strike_count) + " times";
+	var result: String = "You've struck %d time" % [strike_count];
+	var result_timed: String = " in %.3f second";
+	if strike_count != 1:
+		result += 's';
+	
 	time_elapsed += delta; # this is fine for ~115 days of constant running
 	
 	if game_manager.cur_state == game_manager.Game_States.TIMER:
-		var displayed_time: String;
+		var displayed_time: float;
 		if time_elapsed <= time_max:
-			displayed_time = str(snapped(time_elapsed, 0.01));
+			displayed_time = time_elapsed;
 		else:
-			displayed_time = str(snapped(time_max, 0.01));
-		
-		game_manager.counter_label.text = result + " in " + displayed_time + " second";
+			displayed_time = time_max;
 			
-		if (snapped(time_elapsed, 0.01) != 1):
-			game_manager.counter_label.text += 's';
+		if displayed_time != 1:
+			result_timed += 's';
+		
+		game_manager.counter_label.text = result + result_timed % [displayed_time];
+
 	else:
 		game_manager.counter_label.text = result;
 
@@ -76,12 +75,13 @@ func handle_strike(volume: float, is_user: bool):
 		has_started = true;
 		
 	if in_recording_mode:
-		recorded_drum_data["data"].append({"volume": volume, "timer": time_elapsed * 1000});
+		recorded_drum_data.append({"c": volume, "t": time_elapsed * 1000});
 		
 	if game_manager.cur_state == game_manager.Game_States.TIMER:
 		if cur_state == Drumming_States.IDLE:
 			if is_user:
 				cur_state = Drumming_States.USER;
+				time_max = 1;
 			else:
 				cur_state = Drumming_States.SAMPLE;
 
@@ -102,18 +102,18 @@ func handle_strike(volume: float, is_user: bool):
 	strike_count += 1;
 	play_strike(volume);
 	
-func handle_pattern(data: Dictionary):
-	if data["data"].is_empty():
-		game_manager.playing_label.text = "This data does not exist!"
+func handle_pattern(woodpecker_data: Dictionary, drum_data: Array):
+	if drum_data.is_empty():
+		game_manager.playing_label.text = "This woodpecker doesn't drum!"
 		return;
 	
-	game_manager.playing_label.text = "Playing a " + data["name"] + "'s drum";
-	time_max = data["data"][-1]["timer"] / 1000;
-	var time_min: float = data["data"][0]["timer"] / 1000;
+	game_manager.playing_label.text = "Playing a %s's drum" % [woodpecker_data["name"]];
+	time_max = drum_data[-1]["t"] / 1000;
+	var time_min: float = drum_data[0]["t"] / 1000;
 	
-	for strike in data["data"]:
-		var time: float = strike["timer"] / 1000;
-		var volume: float = strike["volume"];
+	for strike in drum_data:
+		var time: float = strike["t"] / 1000;
+		var volume: float = strike["v"];
 		get_tree().create_timer(time - time_min).timeout.connect(func(): handle_strike(volume, false));
 
 
@@ -147,7 +147,6 @@ func _on_drum_timer_timeout() -> void:
 
 func _on_delay_timer_timeout() -> void:
 	cur_state = Drumming_States.IDLE;
-	time_max = 1;
 	if mouse_in:
 		animated_sprite.play("hover");
 	else:

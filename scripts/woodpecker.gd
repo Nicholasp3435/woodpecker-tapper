@@ -6,6 +6,7 @@ extends TextureButton
 @onready var label: Label = $Label;
 
 const WOODPECKER_IMAGE_PATH: String = "res://assets/sprites/woodpeckers/";
+const WOODPECKER_DRUM_PATH: String = "res://assets/drum-data/";
 
 ## Macaulay Library taxon code
 @export var taxon_code: String = "":
@@ -14,7 +15,8 @@ const WOODPECKER_IMAGE_PATH: String = "res://assets/sprites/woodpeckers/";
 		if is_node_ready():
 			update_self()
 
-var data: Dictionary = {};
+var woopecker_data: Dictionary = {};
+var drum_data: Array = [];
 
 func _ready():
 	update_self();
@@ -27,9 +29,11 @@ func update_self():
 	var image_path: String = WOODPECKER_IMAGE_PATH + taxon_code + ".png";
 	texture_normal = load(image_path);
 	
-	data = game_manager.WOODPECKER_DATA[taxon_code]
+	woopecker_data = game_manager.WOODPECKER_DATA[taxon_code];
+	drum_data = load(WOODPECKER_DRUM_PATH + "/%s.json" % [taxon_code]).data;
 	
-	label.text = data["name"];
+	
+	label.text = woopecker_data["name"];
 
 
 func _on_button_up() -> void:
@@ -37,4 +41,4 @@ func _on_button_up() -> void:
 		return;
 	
 	game_manager.info.taxon_code = self.taxon_code;
-	pyre.handle_pattern(data);
+	pyre.handle_pattern(woopecker_data, drum_data);
