@@ -1,29 +1,29 @@
 [gd_scene format=3 uid="uid://bbhhp7hqcqtg6"]
 
 [ext_resource type="Script" uid="uid://ddtuog7doi6u2" path="res://scripts/pyre.gd" id="1_to21n"]
-[ext_resource type="Texture2D" uid="uid://ct18cyhbqdvoa" path="res://assets/sprites/pyre.png" id="1_tolfl"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_to21n"]
-atlas = ExtResource("1_tolfl")
-region = Rect2(0, 242, 187, 242)
+[ext_resource type="Texture2D" uid="uid://oej6xt7sl0yj" path="res://assets/sprites/sprite_sheet.png" id="2_to21n"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6amyj"]
-atlas = ExtResource("1_tolfl")
-region = Rect2(0, 0, 187, 242)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_yuc2f"]
-atlas = ExtResource("1_tolfl")
-region = Rect2(0, 242, 187, 242)
+atlas = ExtResource("2_to21n")
+region = Rect2(620, 0, 620, 877)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wxbv4"]
-atlas = ExtResource("1_tolfl")
-region = Rect2(0, 484, 187, 242)
+atlas = ExtResource("2_to21n")
+region = Rect2(0, 0, 620, 877)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yuc2f"]
+atlas = ExtResource("2_to21n")
+region = Rect2(620, 0, 620, 877)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mtim8"]
+atlas = ExtResource("2_to21n")
+region = Rect2(1240, 0, 620, 877)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_yuc2f"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_to21n")
+"texture": SubResource("AtlasTexture_6amyj")
 }],
 "loop": true,
 "name": &"hover",
@@ -31,7 +31,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_6amyj")
+"texture": SubResource("AtlasTexture_wxbv4")
 }],
 "loop": true,
 "name": &"idle",
@@ -42,7 +42,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_yuc2f")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_wxbv4")
+"texture": SubResource("AtlasTexture_mtim8")
 }],
 "loop": false,
 "name": &"strike",
@@ -50,8 +50,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tolfl"]
-radius = 90.0
-height = 250.0
+radius = 113.0
+height = 406.0
 
 [node name="Pyre" type="Node2D" unique_id=386602154]
 script = ExtResource("1_to21n")
@@ -63,6 +63,8 @@ one_shot = true
 one_shot = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=829258015]
+position = Vector2(-12, 12)
+scale = Vector2(0.49838713, 0.49838713)
 sprite_frames = SubResource("SpriteFrames_yuc2f")
 animation = &"idle"
 autoplay = "idle"
@@ -70,7 +72,7 @@ autoplay = "idle"
 [node name="Area2D" type="Area2D" parent="." unique_id=137122845]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1281183880]
-position = Vector2(-8, 4)
+position = Vector2(8, 12)
 shape = SubResource("CapsuleShape2D_tolfl")
 
 [connection signal="timeout" from="DrumTimer" to="." method="_on_drum_timer_timeout"]

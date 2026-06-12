@@ -8,11 +8,10 @@ offset_right = 425.0
 offset_bottom = 600.0
 theme_override_fonts/font = ExtResource("1_6cmwp")
 theme_override_font_sizes/font_size = 14
-current_tab = 1
+current_tab = 0
 script = ExtResource("1_3wikv")
 
 [node name="General" type="Control" parent="." unique_id=1842154020]
-visible = false
 layout_mode = 2
 metadata/_tab_index = 0
 
@@ -77,9 +76,60 @@ position = Vector2(212, 198.00002)
 scale = Vector2(2, 2)
 
 [node name="Distribution" type="Control" parent="." unique_id=871046642]
+visible = false
 layout_mode = 2
 metadata/_tab_index = 1
 
 [node name="Map" type="Sprite2D" parent="Distribution" unique_id=2025221796]
 position = Vector2(213.12498, 265.674)
 scale = Vector2(0.40015098, 0.40015095)
+
+[node name="Credits" type="Control" parent="." unique_id=1204405584]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="ImageSource" type="Label" parent="Credits" unique_id=1530161249]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 10.0
+offset_right = 120.0
+offset_bottom = 33.0
+theme_override_fonts/font = ExtResource("1_6cmwp")
+text = "Image source:"
+
+[node name="ImageLink" type="LinkButton" parent="Credits" unique_id=395044052]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 33.0
+offset_right = 371.0
+offset_bottom = 73.0
+theme_override_fonts/font = ExtResource("1_6cmwp")
+text = "Macaulay Library #"
+
+[node name="DrumSource" type="Label" parent="Credits" unique_id=1723901339]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 63.0
+offset_right = 121.0
+offset_bottom = 86.0
+theme_override_fonts/font = ExtResource("1_6cmwp")
+text = "Drum source:"
+
+[node name="DrumLink" type="LinkButton" parent="Credits" unique_id=2146735477]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 86.0
+offset_right = 372.0
+offset_bottom = 126.0
+theme_override_fonts/font = ExtResource("1_6cmwp")
+text = "Macaulay Library #"
+
+[node name="DrumTime" type="Label" parent="Credits" unique_id=2118570278]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 111.0
+offset_right = 183.0
+offset_bottom = 134.0
+theme_override_fonts/font = ExtResource("1_6cmwp")
+text = "Time"
