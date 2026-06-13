@@ -3,11 +3,36 @@
 [ext_resource type="Script" uid="uid://srfqhxnja7s" path="res://scripts/info.gd" id="1_3wikv"]
 [ext_resource type="FontFile" uid="uid://bwab4r4u3deb6" path="res://assets/AcPlus_IBM_BIOS_ao.ttf" id="1_6cmwp"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1t52y"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0, 0, 0, 0.7529412)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kin2u"]
+content_margin_left = 10.0
+content_margin_top = 4.0
+content_margin_right = 10.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 0.7529412)
+border_width_top = 2
+border_color = Color(1, 1, 1, 0.75)
+corner_detail = 1
+
 [node name="Info" type="TabContainer" unique_id=1797491458]
 offset_right = 425.0
 offset_bottom = 600.0
+theme_override_constants/tab_separation = 3
 theme_override_fonts/font = ExtResource("1_6cmwp")
 theme_override_font_sizes/font_size = 14
+theme_override_styles/panel = SubResource("StyleBoxFlat_1t52y")
+theme_override_styles/tab_selected = SubResource("StyleBoxFlat_kin2u")
 current_tab = 0
 script = ExtResource("1_3wikv")
 
