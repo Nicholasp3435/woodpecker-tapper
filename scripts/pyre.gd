@@ -75,7 +75,7 @@ func handle_strike(volume: float, is_user: bool):
 		has_started = true;
 		
 	if in_recording_mode:
-		recorded_drum_data.append({"c": volume, "t": time_elapsed * 1000});
+		recorded_drum_data.append({"v": volume, "t": time_elapsed * 1000});
 		
 	if game_manager.cur_state == game_manager.Game_States.TIMER:
 		if cur_state == Drumming_States.IDLE:
