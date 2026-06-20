@@ -9,6 +9,7 @@ extends Control;
 @onready var iucn_color: ColorRect = $General/IUCNColor
 @onready var iucn: RichTextLabel = $General/IUCN
 @onready var icon: Sprite2D = $General/Icon
+@onready var border: Sprite2D = $General/Border
 
 @onready var map: Sprite2D = $Distribution/Map
 

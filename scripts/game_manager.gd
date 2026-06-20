@@ -19,26 +19,22 @@ var cur_state: int = Game_States.TIMER;
 
 
 func _on_endless_toggle_toggled(toggled_on: bool) -> void:
+	recording_toggle.visible = toggled_on;
+	replay_button.visible = toggled_on;
+	
 	if toggled_on:
 		cur_state = Game_States.ENDLESS;
-		recording_toggle.visible = true;
-		replay_button.visible = true;
 	else:
 		cur_state = Game_States.TIMER;
-		recording_toggle.visible = false;
-		replay_button.visible = false;
 
 func _on_recording_toggle_toggled(toggled_on: bool) -> void:
+	pyre.in_recording_mode = toggled_on;
+	replay_button.visible = !toggled_on;
+	endless_toggle.visible = !toggled_on;
+	
 	if toggled_on:
-		pyre.in_recording_mode = true;
-		replay_button.visible = false;
-		endless_toggle.visible = false;
 		pyre.time_elapsed = 0;
 		pyre.recorded_drum_data = []
-	else:
-		pyre.in_recording_mode = false;
-		replay_button.visible = true;
-		endless_toggle.visible = true;
 
 func _on_replay_button_button_up() -> void:
 	if pyre.cur_state != pyre.Drumming_States.IDLE:

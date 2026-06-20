@@ -1,25 +1,40 @@
 [gd_scene format=3 uid="uid://kju2k3tkotrn"]
 
-[ext_resource type="Texture2D" uid="uid://rvbyt8iye7ol" path="res://assets/sprites/woodpeckers/dowwoo.png" id="1_ewwwu"]
 [ext_resource type="Script" uid="uid://dvllxj2w84v53" path="res://scripts/woodpecker.gd" id="1_l628s"]
+[ext_resource type="Texture2D" uid="uid://rvbyt8iye7ol" path="res://assets/sprites/woodpeckers/dowwoo.png" id="2_ewwwu"]
 [ext_resource type="FontFile" uid="uid://bwab4r4u3deb6" path="res://assets/AcPlus_IBM_BIOS_ao.ttf" id="3_ewwwu"]
+[ext_resource type="Texture2D" uid="uid://3d7a7jt3uddg" path="res://assets/sprites/border.png" id="4_upeyg"]
 
-[node name="Woodpecker" type="TextureButton" unique_id=1366567008]
-offset_right = 96.0
-offset_bottom = 96.0
+[node name="Woodpecker" type="Control" unique_id=482887384]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 176.0
+offset_bottom = 160.0
+scale = Vector2(0.25, 0.25)
 mouse_default_cursor_shape = 2
-texture_normal = ExtResource("1_ewwwu")
 script = ExtResource("1_l628s")
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=2088804227]
+layout_mode = 0
+offset_right = 400.0
+offset_bottom = 300.0
+scale = Vector2(0.4, 0.4)
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("2_ewwwu")
 
 [node name="Label" type="Label" parent="." unique_id=450405554]
 layout_mode = 0
-offset_left = 1.0
-offset_top = 96.0
-offset_right = 96.0
-offset_bottom = 145.0
+offset_top = 124.0
+offset_right = 170.0
+offset_bottom = 173.0
 theme_override_fonts/font = ExtResource("3_ewwwu")
-theme_override_font_sizes/font_size = 11
+theme_override_font_sizes/font_size = 16
 text = "Downy Woodpecker"
 autowrap_mode = 3
 
-[connection signal="button_up" from="." to="." method="_on_button_up"]
+[node name="Border" type="Sprite2D" parent="." unique_id=309283783]
+position = Vector2(80, 59.999992)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_upeyg")
+
+[connection signal="button_up" from="TextureButton" to="." method="_on_button_up"]

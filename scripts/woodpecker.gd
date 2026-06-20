@@ -1,9 +1,11 @@
 @tool
-extends TextureButton
+extends Control
 
 @onready var game_manager: Node = %GameManager;
 @onready var pyre: Node2D = %Pyre;
 @onready var label: Label = $Label;
+@onready var texture_button: TextureButton = $TextureButton
+
 
 const WOODPECKER_IMAGE_PATH: String = "res://assets/sprites/woodpeckers/";
 const WOODPECKER_DRUM_PATH: String = "res://assets/drum-data/";
@@ -27,7 +29,7 @@ func update_self():
 	if taxon_code == "":
 		return;
 
-	texture_normal = load(WOODPECKER_IMAGE_PATH + taxon_code + ".png");	
+	texture_button.texture_normal = load(WOODPECKER_IMAGE_PATH + taxon_code + ".png");	
 	woopecker_data = game_manager.WOODPECKER_DATA[taxon_code];
 	drum_data = load(WOODPECKER_DRUM_PATH + "/%s.json" % [taxon_code]).data;
 
