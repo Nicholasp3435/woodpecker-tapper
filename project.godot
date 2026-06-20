@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Woodpecker Tapper"
 run/main_scene="uid://b1l2p1k3uy8yc"
-config/features=PackedStringArray("4.6", "GL Compatibility")
+config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [display]
@@ -43,4 +43,5 @@ strike={
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+textures/vram_compression/import_etc2_astc=true
 environment/defaults/default_clear_color=Color(0.40392157, 0.65882355, 0.9019608, 1)
