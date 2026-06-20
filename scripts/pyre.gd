@@ -11,6 +11,8 @@ var mouse_in: bool = false;
 const WOODPECKER_STRIKE: AudioStreamMP3 = preload("uid://bnjd0f1fhcg6c");
 const SPEED_TO_BEAT: int = 12;
 
+var volume_normalize: float = 0.8;
+
 var recorded_drum_data: Array = [];
 var time_elapsed: float = 0.0;
 var time_max: float = 1.0;
@@ -66,7 +68,7 @@ func play_strike(volume: float):
 	var audio_player: AudioStreamPlayer = AudioStreamPlayer.new();
 	add_child(audio_player);
 	audio_player.stream = WOODPECKER_STRIKE;
-	audio_player.volume_linear = volume;
+	audio_player.volume_linear = volume * volume_normalize;
 	audio_player.play();
 	audio_player.finished.connect(audio_player.queue_free);
 
