@@ -5,6 +5,7 @@ extends Node;
 @onready var counter_label: Label = $"../CounterLabel";
 @onready var playing_label: Label = $"../PlayingLabel";
 @onready var settings: Panel = $"../ButtonContainer/Settings"
+@onready var starting_info: Control = $"../StartingInfo"
 
 @onready var endless_toggle: TextureButton = $"../ButtonContainer/EndlessToggle"
 @onready var recording_toggle: TextureButton = $"../ButtonContainer/RecordingToggle"
@@ -55,6 +56,8 @@ func _on_check_button_pressed() -> void:
 func _on_h_slider_value_changed(value: float) -> void:
 	pyre.volume_normalize = value / 100;
 
-
 func _on_settings_toggle_toggled(toggled_on: bool) -> void:
 	settings.visible = toggled_on;
+	
+func _on_info_button_button_up() -> void:
+	starting_info.visible = true;
