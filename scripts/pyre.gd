@@ -24,10 +24,9 @@ var cur_state: int = Drumming_States.IDLE;
 
 var in_recording_mode: bool = false;
 
-var has_started: bool = false;
 
 func _process(delta: float) -> void:
-	if !has_started:
+	if !game_manager.has_started:
 		return;
 	
 	var result: String = "You've struck %d time" % [strike_count];
@@ -73,8 +72,9 @@ func play_strike(volume: float):
 	audio_player.finished.connect(audio_player.queue_free);
 
 func handle_strike(volume: float, is_user: bool):
-	if !has_started:
-		has_started = true;
+	if !game_manager.has_started:
+		game_manager.starting_info.visible = false;
+		game_manager.has_started = true;
 		
 	if in_recording_mode:
 		recorded_drum_data.append({"v": volume, "t": time_elapsed * 1000});

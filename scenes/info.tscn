@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://srfqhxnja7s" path="res://scripts/info.gd" id="1_3wikv"]
 [ext_resource type="FontFile" uid="uid://bwab4r4u3deb6" path="res://assets/AcPlus_IBM_BIOS_ao.ttf" id="1_6cmwp"]
-[ext_resource type="Texture2D" uid="uid://rvbyt8iye7ol" path="res://assets/sprites/woodpeckers/dowwoo.png" id="3_kin2u"]
 [ext_resource type="Texture2D" uid="uid://3d7a7jt3uddg" path="res://assets/sprites/border.png" id="4_3wikv"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1t52y"]
@@ -49,7 +48,6 @@ offset_bottom = 72.0
 theme_override_constants/line_separation = 8
 theme_override_fonts/normal_font = ExtResource("1_6cmwp")
 theme_override_font_sizes/normal_font_size = 24
-text = "Downy Woodpecker"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -62,7 +60,6 @@ theme_override_fonts/normal_font = ExtResource("1_6cmwp")
 theme_override_fonts/italics_font = ExtResource("1_6cmwp")
 theme_override_font_sizes/normal_font_size = 25
 bbcode_enabled = true
-text = "[i][u]Dryobates pubescens[/u][/i]"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -103,9 +100,9 @@ vertical_alignment = 1
 [node name="Icon" type="Sprite2D" parent="General" unique_id=952211851]
 position = Vector2(141.83333, 198.62502)
 scale = Vector2(0.66249985, 0.6625)
-texture = ExtResource("3_kin2u")
 
 [node name="Border" type="Sprite2D" parent="General" unique_id=2127320539]
+visible = false
 position = Vector2(142, 198.5)
 scale = Vector2(0.665, 0.66333336)
 texture = ExtResource("4_3wikv")

@@ -5,19 +5,19 @@ extends Node;
 @onready var counter_label: Label = $"../CounterLabel";
 @onready var playing_label: Label = $"../PlayingLabel";
 @onready var settings: Panel = $"../ButtonContainer/Settings"
-@onready var starting_info: Control = $"../StartingInfo"
 
 @onready var endless_toggle: TextureButton = $"../ButtonContainer/EndlessToggle"
 @onready var recording_toggle: TextureButton = $"../ButtonContainer/RecordingToggle"
 @onready var replay_button: TextureButton = $"../ButtonContainer/ReplayButton"
 @onready var info: Control = $"../Info"
+@onready var starting_info: Control = $"../StartingInfo"
 
 const WOODPECKER_DATA: Dictionary = preload("res://assets/woodpecker_data.json").data;
 
+var has_started: bool = false;
 
 enum Game_States {TIMER, ENDLESS};
 var cur_state: int = Game_States.TIMER;
-
 
 func _on_endless_toggle_toggled(toggled_on: bool) -> void:
 	recording_toggle.visible = toggled_on;
@@ -58,6 +58,3 @@ func _on_h_slider_value_changed(value: float) -> void:
 
 func _on_settings_toggle_toggled(toggled_on: bool) -> void:
 	settings.visible = toggled_on;
-	
-func _on_info_button_button_up() -> void:
-	starting_info.visible = true;
