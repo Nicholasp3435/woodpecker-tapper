@@ -165,3 +165,21 @@ offset_right = 183.0
 offset_bottom = 134.0
 theme_override_fonts/font = ExtResource("1_6cmwp")
 text = "Time"
+
+[node name="BlurbSource" type="Label" parent="Credits" unique_id=947670752]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 135.0
+offset_right = 386.0
+offset_bottom = 158.0
+theme_override_fonts/font = ExtResource("1_6cmwp")
+text = "Text Blurb and distribution:"
+
+[node name="BlurbLink" type="LinkButton" parent="Credits" unique_id=1531546884]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 157.0
+offset_right = 370.0
+offset_bottom = 197.0
+theme_override_fonts/font = ExtResource("1_6cmwp")
+text = "Birds of the World"

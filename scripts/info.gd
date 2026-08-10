@@ -16,6 +16,7 @@ extends Control;
 @onready var image_link: LinkButton = $Credits/ImageLink
 @onready var drum_link: LinkButton = $Credits/DrumLink
 @onready var drum_time: Label = $Credits/DrumTime
+@onready var blurb_link: LinkButton = $Credits/BlurbLink
 
 const WOODPECKER_IMAGE_PATH: String = "res://assets/sprites/woodpeckers/";
 const DISTRIBUTION_IMAGE_MAP: String = "res://assets/sprites/maps/";
@@ -81,6 +82,8 @@ func update_self():
 	drum_link.uri = data["drum-source"];
 	if data["drum-source"].contains("macaulaylibrary"):
 		drum_link.text = MACAULAY_LABEL % data["drum-source"].split('/')[-1];
+		
+	blurb_link.uri = "https://birdsoftheworld.org/bow/species/" + taxon_code
 		
 	var minute: int = data["source-time"] / 60;
 	var sec: int = (data["source-time"] as int) % 60;
