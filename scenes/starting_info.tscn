@@ -28,7 +28,7 @@ script = ExtResource("1_xyugy")
 [node name="Panel" type="Panel" parent="." unique_id=813575898]
 layout_mode = 0
 offset_right = 426.0
-offset_bottom = 600.0
+offset_bottom = 603.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_vm7ku")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1846171299]

@@ -16,6 +16,28 @@ corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 corner_detail = 5
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c0a5a"]
+content_margin_left = 10.0
+content_margin_top = 4.0
+content_margin_right = 10.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 0.68235296)
+border_width_left = 1
+border_width_right = 1
+border_color = Color(0.175, 0.175, 0.175, 1)
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3wikv"]
+content_margin_left = 10.0
+content_margin_top = 20.0
+content_margin_right = 10.0
+content_margin_bottom = 20.0
+bg_color = Color(0.1, 0.1, 0.1, 0.3)
+border_width_left = 1
+border_width_right = 1
+border_color = Color(0.175, 0.175, 0.175, 1)
+corner_detail = 1
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kin2u"]
 content_margin_left = 10.0
 content_margin_top = 4.0
@@ -25,14 +47,17 @@ bg_color = Color(0, 0, 0, 0.7529412)
 border_width_top = 2
 border_color = Color(1, 1, 1, 0.75)
 corner_detail = 1
+expand_margin_top = 3.0
 
 [node name="Info" type="TabContainer" unique_id=1797491458]
 offset_right = 425.0
 offset_bottom = 600.0
 theme_override_constants/tab_separation = 3
 theme_override_fonts/font = ExtResource("1_6cmwp")
-theme_override_font_sizes/font_size = 14
+theme_override_font_sizes/font_size = 16
 theme_override_styles/panel = SubResource("StyleBoxFlat_1t52y")
+theme_override_styles/tab_unselected = SubResource("StyleBoxFlat_c0a5a")
+theme_override_styles/tab_hovered = SubResource("StyleBoxFlat_3wikv")
 theme_override_styles/tab_selected = SubResource("StyleBoxFlat_kin2u")
 current_tab = 0
 script = ExtResource("1_3wikv")
@@ -68,7 +93,7 @@ layout_mode = 0
 offset_left = 10.0
 offset_top = 304.0
 offset_right = 414.0
-offset_bottom = 559.0
+offset_bottom = 536.0
 theme_override_constants/line_separation = 8
 theme_override_fonts/normal_font = ExtResource("1_6cmwp")
 theme_override_fonts/italics_font = ExtResource("1_6cmwp")
