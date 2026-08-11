@@ -102,7 +102,6 @@ position = Vector2(141.83333, 198.62502)
 scale = Vector2(0.66249985, 0.6625)
 
 [node name="Border" type="Sprite2D" parent="General" unique_id=2127320539]
-visible = false
 position = Vector2(142, 198.5)
 scale = Vector2(0.665, 0.66333336)
 texture = ExtResource("4_3wikv")

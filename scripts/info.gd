@@ -78,6 +78,8 @@ func update_self():
 	image_link.uri = data["image-source"];
 	if data["image-source"].contains("macaulaylibrary"):
 		image_link.text = MACAULAY_LABEL % data["image-source"].split('/')[-1];
+	elif data["image-source"].contains("Nichao"):
+		image_link.text = "Nichꜵ";
 		
 	drum_link.uri = data["drum-source"];
 	if data["drum-source"].contains("macaulaylibrary"):

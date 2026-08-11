@@ -13,6 +13,7 @@ config_version=5
 config/name="Woodpecker Tapper"
 run/main_scene="uid://b1l2p1k3uy8yc"
 config/features=PackedStringArray("4.7", "GL Compatibility")
+boot_splash/image="uid://dym5kf4oobdxw"
 config/icon="res://icon.svg"
 
 [display]
@@ -20,7 +21,6 @@ config/icon="res://icon.svg"
 window/size/viewport_width=1280
 window/size/viewport_height=720
 window/stretch/mode="canvas_items"
-window/stretch/aspect="keep_height"
 
 [dotnet]
 
