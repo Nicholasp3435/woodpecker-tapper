@@ -76,9 +76,10 @@ func update_self():
 		iucn.add_theme_color_override("default_color", "#ffffff");
 		
 	image_link.uri = data["image-source"];
+	
 	if data["image-source"].contains("macaulaylibrary"):
 		image_link.text = MACAULAY_LABEL % data["image-source"].split('/')[-1];
-	elif data["image-source"].contains("Nichao"):
+	elif data["image-source"].contains("woodpecker.gay"):
 		image_link.text = "Nichꜵ";
 		
 	drum_link.uri = data["drum-source"];
