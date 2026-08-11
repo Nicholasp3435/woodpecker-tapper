@@ -33,7 +33,7 @@ func update_self():
 	woopecker_data = game_manager.WOODPECKER_DATA[taxon_code];
 	drum_data = load(WOODPECKER_DRUM_PATH + "/%s.json" % [taxon_code]).data;
 
-	label.text = woopecker_data["name"];
+	label.text = woopecker_data["name"].replace("-", "-" + char(0x200B));
 
 
 func _on_button_up() -> void:
